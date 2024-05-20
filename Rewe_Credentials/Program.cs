@@ -2,7 +2,7 @@
 using System.Text;
 using System.Text.Json;
 
-namespace Rewe_Credentials
+namespace Rewe_JobSearcher
 {
     internal class Program
     {

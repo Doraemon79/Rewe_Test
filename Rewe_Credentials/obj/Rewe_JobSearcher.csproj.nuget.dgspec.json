@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Repos\\Rewe_test\\Rewe_Credentials\\Rewe_Credentials.csproj": {}
+    "C:\\Repos\\Rewe_test\\Rewe_Credentials\\Rewe_JobSearcher.csproj": {}
   },
   "projects": {
-    "C:\\Repos\\Rewe_test\\Rewe_Credentials\\Rewe_Credentials.csproj": {
+    "C:\\Repos\\Rewe_test\\Rewe_Credentials\\Rewe_JobSearcher.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Repos\\Rewe_test\\Rewe_Credentials\\Rewe_Credentials.csproj",
-        "projectName": "Rewe_Credentials",
-        "projectPath": "C:\\Repos\\Rewe_test\\Rewe_Credentials\\Rewe_Credentials.csproj",
+        "projectUniqueName": "C:\\Repos\\Rewe_test\\Rewe_Credentials\\Rewe_JobSearcher.csproj",
+        "projectName": "Rewe_JobSearcher",
+        "projectPath": "C:\\Repos\\Rewe_test\\Rewe_Credentials\\Rewe_JobSearcher.csproj",
         "packagesPath": "C:\\Users\\ignle\\.nuget\\packages\\",
         "outputPath": "C:\\Repos\\Rewe_test\\Rewe_Credentials\\obj\\",
         "projectStyle": "PackageReference",

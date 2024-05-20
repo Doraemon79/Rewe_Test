@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Repos\\Rewe_test\\Rewe_Credentials\\Rewe_JobSearcher.csproj",
-      "projectName": "Rewe_JobSearcher",
-      "projectPath": "C:\\Repos\\Rewe_test\\Rewe_Credentials\\Rewe_JobSearcher.csproj",
+      "projectUniqueName": "C:\\Repos\\Rewe_test\\JobSearcher_Queries\\JobSearcher_Queries.csproj",
+      "projectName": "JobSearcher_Queries",
+      "projectPath": "C:\\Repos\\Rewe_test\\JobSearcher_Queries\\JobSearcher_Queries.csproj",
       "packagesPath": "C:\\Users\\ignle\\.nuget\\packages\\",
-      "outputPath": "C:\\Repos\\Rewe_test\\Rewe_Credentials\\obj\\",
+      "outputPath": "C:\\Repos\\Rewe_test\\JobSearcher_Queries\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
