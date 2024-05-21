@@ -1,0 +1,13 @@
+C:\Repos\Rewe_test\JobSearcher_Queries\bin\Debug\net8.0\JobSearcher_Queries.deps.json
+C:\Repos\Rewe_test\JobSearcher_Queries\bin\Debug\net8.0\JobSearcher_Queries.dll
+C:\Repos\Rewe_test\JobSearcher_Queries\bin\Debug\net8.0\JobSearcher_Queries.pdb
+C:\Repos\Rewe_test\JobSearcher_Queries\obj\Debug\net8.0\JobSearcher_Queries.csproj.AssemblyReference.cache
+C:\Repos\Rewe_test\JobSearcher_Queries\obj\Debug\net8.0\JobSearcher_Queries.GeneratedMSBuildEditorConfig.editorconfig
+C:\Repos\Rewe_test\JobSearcher_Queries\obj\Debug\net8.0\JobSearcher_Queries.AssemblyInfoInputs.cache
+C:\Repos\Rewe_test\JobSearcher_Queries\obj\Debug\net8.0\JobSearcher_Queries.AssemblyInfo.cs
+C:\Repos\Rewe_test\JobSearcher_Queries\obj\Debug\net8.0\JobSearcher_Queries.csproj.CoreCompileInputs.cache
+C:\Repos\Rewe_test\JobSearcher_Queries\obj\Debug\net8.0\JobSearcher_Queries.sourcelink.json
+C:\Repos\Rewe_test\JobSearcher_Queries\obj\Debug\net8.0\JobSearcher_Queries.dll
+C:\Repos\Rewe_test\JobSearcher_Queries\obj\Debug\net8.0\refint\JobSearcher_Queries.dll
+C:\Repos\Rewe_test\JobSearcher_Queries\obj\Debug\net8.0\JobSearcher_Queries.pdb
+C:\Repos\Rewe_test\JobSearcher_Queries\obj\Debug\net8.0\ref\JobSearcher_Queries.dll

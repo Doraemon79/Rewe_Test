@@ -4,14 +4,14 @@
     "C:\\Repos\\Rewe_test\\Rewe_Credentials\\Rewe_JobSearcher.csproj": {}
   },
   "projects": {
-    "C:\\Repos\\Rewe_test\\Rewe_Credentials\\Rewe_JobSearcher.csproj": {
+    "C:\\Repos\\Rewe_test\\JobSearcher_Queries\\JobSearcher_Queries.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Repos\\Rewe_test\\Rewe_Credentials\\Rewe_JobSearcher.csproj",
-        "projectName": "Rewe_JobSearcher",
-        "projectPath": "C:\\Repos\\Rewe_test\\Rewe_Credentials\\Rewe_JobSearcher.csproj",
+        "projectUniqueName": "C:\\Repos\\Rewe_test\\JobSearcher_Queries\\JobSearcher_Queries.csproj",
+        "projectName": "JobSearcher_Queries",
+        "projectPath": "C:\\Repos\\Rewe_test\\JobSearcher_Queries\\JobSearcher_Queries.csproj",
         "packagesPath": "C:\\Users\\ignle\\.nuget\\packages\\",
-        "outputPath": "C:\\Repos\\Rewe_test\\Rewe_Credentials\\obj\\",
+        "outputPath": "C:\\Repos\\Rewe_test\\JobSearcher_Queries\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -49,6 +49,107 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Mvc.Core": {
+              "target": "Package",
+              "version": "[2.1.38, )"
+            },
+            "Serilog": {
+              "target": "Package",
+              "version": "[3.1.1, )"
+            },
+            "Serilog.Sinks.Console": {
+              "target": "Package",
+              "version": "[5.0.1, )"
+            },
+            "Serilog.Sinks.File": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Repos\\Rewe_test\\Rewe_Credentials\\Rewe_JobSearcher.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Repos\\Rewe_test\\Rewe_Credentials\\Rewe_JobSearcher.csproj",
+        "projectName": "Rewe_JobSearcher",
+        "projectPath": "C:\\Repos\\Rewe_test\\Rewe_Credentials\\Rewe_JobSearcher.csproj",
+        "packagesPath": "C:\\Users\\ignle\\.nuget\\packages\\",
+        "outputPath": "C:\\Repos\\Rewe_test\\Rewe_Credentials\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\ignle\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Repos\\Rewe_test\\JobSearcher_Queries\\JobSearcher_Queries.csproj": {
+                "projectPath": "C:\\Repos\\Rewe_test\\JobSearcher_Queries\\JobSearcher_Queries.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Serilog": {
+              "target": "Package",
+              "version": "[3.1.1, )"
+            },
+            "Serilog.Sinks.Console": {
+              "target": "Package",
+              "version": "[5.0.1, )"
+            },
+            "Serilog.Sinks.File": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
