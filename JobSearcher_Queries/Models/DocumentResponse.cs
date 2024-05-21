@@ -2,8 +2,8 @@
 {
     public class DocumentResponse
     {
-        public int documentId { get; set; }
-        public string documentType = "Cv";
-        public string documentName { get; set; }
+        public int DocumentId { get; set; } = 0;
+        public string DocumentType { get; set; } = "Cv";
+        public string DocumentName { get; set; } = "";
     }
 }
