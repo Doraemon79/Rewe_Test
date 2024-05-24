@@ -10,11 +10,12 @@ namespace Rewe_JobSearcher.BusinessLogic
         public async Task<string> GetToken()
         {
             // Your client credentials
-            Console.WriteLine("Please write your client-Id");
-            var clientId = Console.ReadLine();
-            //string clientId = "2f7680b4-35c2-45d9-8560-3e7af1be61fa";
-            Console.WriteLine("Please write your client-Secret");
-            string clientSecret = Console.ReadLine();
+            //Console.WriteLine("Please write your client-Id");
+            //var clientId = Console.ReadLine();
+            string clientId = "2f7680b4-35c2-45d9-8560-3e7af1be61fa";
+            //Console.WriteLine("Please write your client-Secret");
+            //string clientSecret = Console.ReadLine();
+            string clientSecret = "1855ed7e-88d5-4d13-8ab2-b40da734befa";
             string accessToken = null;
 
             // Combine the credentials into a single string
@@ -51,31 +52,67 @@ namespace Rewe_JobSearcher.BusinessLogic
 
         public Filter GetFilter()
         {
+            //this filler has been made in a simplified form for testing purposes
             Filter filter = new Filter();
-            filter.AccountingCompanyId = "string";
-            filter.AccountingCompanyIds = new List<string> { "string" };
-            filter.JobGroupIds = new List<int> { 0 };
-            filter.SubJobGroupIds = new List<int> { 0 };
-            filter.JobTypeIds = new List<int> { 0 };
-            filter.ProvinceIdList = new List<string> { "string" };
-            filter.DistrictIdList = new List<string> { "string" };
-            filter.EmploymentLevelId = "G";
-            filter.SearchTerm = "";
-            filter.JobLevels = new List<string> { "string" };
-            filter.JobDescriptionId = "string";
-            filter.CityList = new List<string> { "string" };
-            filter.Zip = "string";
-            filter.MinWorkingHours = 0;
-            filter.MaxWorkingHours = 0;
-            filter.Offset = 0;
-            filter.Limit = 0;
-            filter.SortField = "Relevancy";
-            filter.SortDirection = "Ascending";
-            filter.IncludeInternal = true;
+            //filter.accountingCompanyId = "";
+            //filter.AccountingCompanyIds = new List<string> { ""};
+            //filter.JobGroupIds = new List<int> { 0 };
+            //filter.SubJobGroupIds = new List<int> { 0 };
+            //filter.JobTypeIds = new List<int> { 0 };
+            //filter.ProvinceIdList = new List<string> { "" };
+            //filter.DistrictIdList = new List<string> { "" };
+            //filter.employmentLevelId = "V";
+            //filter.searchTerm = "";
+            //filter.JobLevels = new List<string> { "" };
+            //filter.jobDescriptionId = "";
+            //filter.CityList = new List<string> { "" };
+            filter.zip = "1200";
+            //filter.minWorkingHours = 0;
+            //filter.maxWorkingHours = 0;
+            //filter.offset = 0;
+            //filter.limit = 0;
+            //filter.sortField = "Relevancy";
+            //filter.sortDirection = "Ascending";
+            //filter.includeInternal = true;
 
             return filter;
         }
 
+        public string ConvertToBase64(string path)
+        {
+            Byte[] bytes = File.ReadAllBytes(path);
+            return Convert.ToBase64String(bytes);
+        }
+
+        public ApplicantDocument DocumentFiller()
+        {
+            ApplicantDocument document = new ApplicantDocument();
+            Console.WriteLine();
+            Console.WriteLine("Please insert the type of the document (Cv, MotivationalLetter, Foto, Misc, GradeSheet)");
+            document.documentType = Console.ReadLine();
+            Console.WriteLine();
+            Console.WriteLine("Please insert the path of the document");
+            var documentPath = Console.ReadLine();
+            if (File.Exists(documentPath))
+            {
+                if ((document.documentType == "Foto" && (!documentPath.EndsWith(".jpg") && !documentPath.EndsWith(".bmp") && !documentPath.EndsWith(".png") && !documentPath.EndsWith(".pdf"))) ||
+                    (document.documentType == "Cv" && (!documentPath.EndsWith(".pdf") && !documentPath.EndsWith(".doc") && !documentPath.EndsWith(".docx"))) ||
+                    (document.documentType == "MotivationalLetter" && (!documentPath.EndsWith(".pdf") && !documentPath.EndsWith(".doc") && !documentPath.EndsWith(".docx"))))
+                {
+                    Console.WriteLine("Invalid document name");
+                }
+                else
+                {
+                    document.documentName = Path.GetFileName(documentPath);
+                }
+                document.documentBlob = ConvertToBase64(documentPath);
+            }
+            else
+            {
+                Console.WriteLine("Invalid path");
+            }
+            return document;
+        }
 
         private string ExtractAccessToken(string jsonResponse)
         {

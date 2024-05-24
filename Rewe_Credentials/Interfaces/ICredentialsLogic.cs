@@ -6,5 +6,7 @@ namespace Rewe_JobSearcher.Interfaces
     {
         Task<string> GetToken();
         Filter GetFilter();
+        string ConvertToBase64(string path);
+        public ApplicantDocument DocumentFiller();
     }
 }

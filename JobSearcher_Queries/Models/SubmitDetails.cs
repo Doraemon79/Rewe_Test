@@ -2,15 +2,14 @@
 {
     public class SubmitDetails
     {
-        public string jobId { get; set; }
-        public List<int> storeIdList { get; set; }
-        public int desiredSalary { get; set; }
-
-        public string recommendedBy { get; set; }
-        public DateTime availableFrom { get; set; }
-        public bool agreedToDataProcessing { get; set; }
-        public bool agreedToDataRelaying { get; set; }
-        public string externalSource { get; set; }
-        public string externalDestination { get; set; }
+        public string jobId { get; set; } = "0";
+        public List<int> storeIdList { get; set; } = new List<int>();
+        public int desiredSalary { get; set; } = 0;
+        public string recommendedBy { get; set; } = "0";
+        public DateTime availableFrom { get; set; } = DateTime.Now;
+        public bool agreedToDataProcessing { get; set; } = false;
+        public bool agreedToDataRelaying { get; set; } = false;
+        public string externalSource { get; set; } = "0";
+        public string externalDestination { get; set; } = "0";
     }
 }

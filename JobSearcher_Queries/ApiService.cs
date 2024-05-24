@@ -2,9 +2,11 @@
 using JobSearcher_Queries.Models;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json.Linq;
+using System.Globalization;
 using System.Net.Http.Headers;
 using System.Text;
 using System.Text.Json;
+using System.Text.Json.Serialization;
 
 namespace JobSearcher_Queries
 {
@@ -17,8 +19,8 @@ namespace JobSearcher_Queries
             _httpClient = httpClient;
         }
 
-
-        public async Task<ActionResult<Credential>> PostCredentials(string token, Credential credential)
+        // This method is used to post the credentials to the API
+        public async Task<IActionResult> PostCredentials(string token, Credential credential)
         {
             var request = new HttpRequestMessage(HttpMethod.Post, "https://dev.apply.rewe-group.at:443/V1/api/job-applications/credentials");
 
@@ -38,20 +40,20 @@ namespace JobSearcher_Queries
             {
                 var responseContent = await response.Content.ReadAsStringAsync();
                 JObject jObj = JObject.Parse(responseContent);
-                credential.Id = jObj["id"].ToObject<int>();
+                credential.Id = (int)jObj["id"];
                 credential.AuthCode = jObj["authCode"].ToString();
 
-                Console.WriteLine($"id is :  {credential.id}");
+                Console.WriteLine($"id is :  {credential.Id}");
                 Console.WriteLine($"authCode is :  {credential.AuthCode}");
             }
             else
             {
                 Console.WriteLine($"Error: {response.StatusCode}");
             }
-            return new OkObjectResult(response);
+            return new OkObjectResult(response.Content);
         }
 
-        public async Task<ActionResult<SearchResponse>> PostSearchAsync(string token, Filter filter)
+        public async Task<IActionResult> PostSearchAsync(string token, Filter filter)
         {
             var request = new HttpRequestMessage(HttpMethod.Post, "https://dev.apply.rewe-group.at:443/V1/api/jobs/search");
             request.Headers.Add("application-auth-code", "recaptcha");
@@ -59,11 +61,19 @@ namespace JobSearcher_Queries
             // Add headers if needed
             _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("bearer", token);
 
+            // When the value is set to null by default the property is ignored this is used just for testing purposes
+            var options = new JsonSerializerOptions
+            {
+                DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull,
+                WriteIndented = true
+            };
             // Serialize the model to JSON and set the request content
             var jsonRequestBody = JsonSerializer.Serialize(filter);
             request.Content = new StringContent(jsonRequestBody, Encoding.UTF8, "application/json");
 
+            //get the response
             var response = await _httpClient.SendAsync(request);
+
             if (response.IsSuccessStatusCode)
             {
                 var responseContent = await response.Content.ReadAsStringAsync();
@@ -84,10 +94,10 @@ namespace JobSearcher_Queries
                 Console.WriteLine($"Error: {response.StatusCode}");
                 return new BadRequestResult();
             }
-            return new OkObjectResult(response.Content);
+            return new OkObjectResult(response);
         }
 
-        public async Task<ActionResult<JobApplicationResult>> Submit(string token, string applicationId, SubmitDetails submitDetails, string authCode)
+        public async Task<IActionResult> PostSubmit(string token, int applicationId, SubmitDetails submitDetails, string authCode)
         {
             var request = new HttpRequestMessage(HttpMethod.Post, "https://dev.apply.rewe-group.at:443/V1/api/job-applications/" + applicationId + "/submit");
 
@@ -103,23 +113,25 @@ namespace JobSearcher_Queries
             var response = await _httpClient.SendAsync(request);
             if (response.IsSuccessStatusCode)
             {
+                Console.WriteLine($"Success");
                 var responseContent = await response.Content.ReadAsStringAsync();
+
                 JObject jObj = JObject.Parse(responseContent);
+                JToken valueToken = jObj["applicationDetails"]?["jobId"];
+
                 JobApplicationResult jobApplicationResult = new JobApplicationResult();
-                jobApplicationResult.JobId = jObj["jobId"].ToString();
-                jobApplicationResult.DesiredSalary = jObj["desiredSalary"].ToObject<int>();
-                Console.WriteLine($"JobId  is:  {jobApplicationResult.JobId}");
+                jobApplicationResult.JobId = valueToken?.ToString();
+                Console.WriteLine($"Success your applicationfor JobId   {jobApplicationResult.JobId} has been submitted");
             }
             else
             {
                 Console.WriteLine($"Error: {response.StatusCode}");
                 return new BadRequestResult();
             }
-            return new OkObjectResult(response.Content);
+            return new OkObjectResult(response);
         }
 
-
-        public async Task<ActionResult<DocumentResponse>> Documents(string token, int applicationId, Document document, string authCode)
+        public async Task<IActionResult> PostDocuments(string token, int applicationId, ApplicantDocument document, string authCode)
         {
             var request = new HttpRequestMessage(HttpMethod.Post, "https://dev.apply.rewe-group.at:443/V1/api/job-applications/" + applicationId + "/documents");
 
@@ -148,7 +160,60 @@ namespace JobSearcher_Queries
                 return new BadRequestResult();
             }
             return new OkObjectResult(response.Content);
+        }
 
+        public async Task<IActionResult> PutApplicantProfile(string token, int applicationId, string authCode)
+        {
+
+            Applicant applicant = ApplicantFiller();
+            var request = new HttpRequestMessage(HttpMethod.Put, "https://dev.apply.rewe-group.at:443/V1/api/job-applications/" + applicationId + "/applicant");
+
+            request.Headers.Add("application-auth-code", authCode);
+
+            // Add headers if needed
+            _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("bearer", token);
+
+            // When the value is set to null by default the property is ignored
+            var options = new JsonSerializerOptions
+            {
+                DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull,
+                WriteIndented = true
+            };
+            // Serialize the model to JSON and set the request content
+            var jsonRequestBody = JsonSerializer.Serialize(applicant);
+            request.Content = new StringContent(jsonRequestBody, Encoding.UTF8, "application/json");
+            var response = await _httpClient.SendAsync(request);
+            if (response.IsSuccessStatusCode)
+            {
+                Console.WriteLine("Your details have been saved");
+            }
+            else
+            {
+                Console.WriteLine($"Error: {response.StatusCode}");
+                return new BadRequestResult();
+            }
+
+            return new OkObjectResult(response.StatusCode);
+        }
+
+        private Applicant ApplicantFiller()
+        {
+            var cultureInfo = new CultureInfo("de-DE");
+            Applicant applicant = new Applicant();
+            Console.WriteLine();
+            Console.WriteLine("Please write your family name ");
+            applicant.lastName = Console.ReadLine();
+            Console.WriteLine();
+            Console.WriteLine("Please write your Nationality code (3 letters Ex: ITA, AUT. Default is AUT) ");
+            applicant.nationality = Console.ReadLine();
+            Console.WriteLine();
+            Console.WriteLine("Please write your country code  code (3 letters Ex: +39, +43Default is +43) ");
+            applicant.nationality = Console.ReadLine();
+            Console.WriteLine();
+            Console.WriteLine("Please write your bith date ");
+            string date = Console.ReadLine();
+            applicant.birthDate = DateTime.Parse(date, cultureInfo);
+            return applicant;
         }
     }
 }

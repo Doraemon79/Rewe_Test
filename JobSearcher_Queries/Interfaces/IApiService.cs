@@ -5,9 +5,10 @@ namespace JobSearcher_Queries.Interfaces
 {
     public interface IApiService
     {
-        Task<ActionResult<Credential>> PostCredentials(string token, Credential credential);
-        Task<ActionResult<SearchResponse>> PostSearchAsync(string token, Filter filter);
-        Task<ActionResult<JobApplicationResult>> Submit(string token, string applicationId, SubmitDetails submitDetails, string authCode);
-        Task<ActionResult<DocumentResponse>> Documents(string token, int applicationId, Document document, string authCode);
+        Task<IActionResult> PostCredentials(string token, Credential credential);
+        Task<IActionResult> PostSearchAsync(string token, Filter filter);
+        Task<IActionResult> PostSubmit(string token, int applicationId, SubmitDetails submitDetails, string authCode);
+        Task<IActionResult> PostDocuments(string token, int applicationId, ApplicantDocument document, string authCode);
+        Task<IActionResult> PutApplicantProfile(string token, int applicationId, string authCode);
     }
 }

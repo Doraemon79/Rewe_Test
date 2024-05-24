@@ -12,7 +12,7 @@
         public string ExternalSource { get; set; } = "";
         public int Id { get; set; } = 0;
         public Applicant Applicant { get; set; } = new Applicant();
-        public List<Document> Documents { get; set; } = new List<Document>();
+        public List<ApplicantDocument> Documents { get; set; } = new List<ApplicantDocument>();
 
     }
 }

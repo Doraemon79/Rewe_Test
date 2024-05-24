@@ -2,25 +2,26 @@
 {
     public class Filter
     {
-        public string AccountingCompanyId { get; set; } = "";
-        public List<string> AccountingCompanyIds { get; set; } = new List<string>();
-        public List<int> JobGroupIds { get; set; } = new List<int>();
-        public List<int> SubJobGroupIds { get; set; } = new List<int>();
-        public List<int> JobTypeIds { get; set; } = new List<int>();
-        public List<string> ProvinceIdList { get; set; } = new List<string>();
-        public List<string> DistrictIdList { get; set; } = new List<string>();
-        public string EmploymentLevelId { get; set; } = "";
-        public string SearchTerm { get; set; } = "";
-        public List<string> JobLevels { get; set; } = new List<string>();
-        public string JobDescriptionId { get; set; } = "";
-        public List<string> CityList { get; set; } = new List<string>();
-        public string Zip { get; set; } = "";
-        public int MinWorkingHours { get; set; } = 0;
-        public int MaxWorkingHours { get; set; } = 48;
-        public int Offset { get; set; } = 0;
-        public int Limit { get; set; } = 0;
-        public string SortField { get; set; } = "";
-        public string SortDirection { get; set; } = "";
-        public bool IncludeInternal { get; set; } = true;
+
+        public string accountingCompanyId { get; set; } = null;
+        public List<string> accountingCompanyIds { get; set; } = null;
+        public List<int> jobGroupIds { get; set; } = null;
+        public List<int> subJobGroupIds { get; set; } = null;
+        public List<int> jobTypeIds { get; set; } = null;
+        public List<string> provinceIdList { get; set; } = null;
+        public List<string> districtIdList { get; set; } = null;
+        public string employmentLevelId { get; set; } = null;
+        public string searchTerm { get; set; } = null;
+        public List<string> jobLevels { get; set; } = null;
+        public string jobDescriptionId { get; set; } = null;
+        public List<string> cityList { get; set; } = null;
+        public string zip { get; set; } = null;
+        //public int minWorkingHours { get; set; } = null;
+        //public int maxWorkingHours { get; set; } = null;
+        //public int offset { get; set; } = 0;
+        //public int limit { get; set; } = 0;
+        public string sortField { get; set; } = null;
+        public string sortDirection { get; set; } = null;
+        //public bool includeInternal { get; set; } = true;
     }
 }

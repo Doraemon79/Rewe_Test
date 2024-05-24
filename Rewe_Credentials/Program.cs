@@ -31,42 +31,54 @@ namespace Rewe_JobSearcher
                 var CredentialsLogicService = host.Services.GetRequiredService<ICredentialsLogic>();
 
                 string token = CredentialsLogicService.GetToken().Result;
-                string ApplicationId = "";
                 bool correct = false;
+                Credential credential = new Credential();
+                await apiService.PostCredentials(token, credential);
                 do
                 {
-                    Console.WriteLine("Would you like to read jobs advertisements [R] or submit [S]  for one");
+
+                    Console.WriteLine("Would you like to read jobs advertisements [R], submit [S], fill your profile [F], load document in your profile [D] or Exit [K]");
                     ConsoleKeyInfo cki = Console.ReadKey();
-                    Credential credential = new Credential();
-                    await apiService.PostCredentials(token, credential);
+                    Console.WriteLine();
+
                     if (cki.Key.ToString() == "R")
                     {
-                        correct = true;
-
                         Filter filter = CredentialsLogicService.GetFilter();
                         await apiService.PostSearchAsync(token, filter);
-                        Console.WriteLine("Press any key to exit...");
-                        Console.ReadKey();
-                        Environment.Exit(0);
+
                     }
                     if (cki.Key.ToString() == "S")
                     {
-                        Console.WriteLine("Please insert the ApplicationId");
-                        ApplicationId = Console.ReadLine();
-                        await apiService.Submit(token, ApplicationId, new SubmitDetails(), credential.AuthCode);
-                        correct = true;
-                        Console.WriteLine("Press any key to exit...");
-                        Console.ReadKey();
+                        Console.WriteLine("Please insert the JobId");
+                        string jobId = Console.ReadLine();
+                        var submitDetails = new SubmitDetails();
+                        submitDetails.jobId = jobId;
+                        apiService.PostSubmit(token, credential.Id, submitDetails, credential.AuthCode);
+                    }
+                    if (cki.Key.ToString() == "D")
+                    {
+                        ApplicantDocument document = new ApplicantDocument();
+                        document = CredentialsLogicService.DocumentFiller();
+                        await apiService.PostDocuments(token, credential.Id, document, credential.AuthCode);
+                    }
+                    if (cki.Key.ToString() == "K")
+                    {
                         Environment.Exit(0);
                     }
-                    else
+                    if (cki.Key.ToString() == "F")
+                    {
+                        await apiService.PutApplicantProfile(token, credential.Id, credential.AuthCode);
+                    }
+                    if (cki.Key.ToString() != "R" && cki.Key.ToString() != "S" && cki.Key.ToString() != "D" && cki.Key.ToString() != "K" && cki.Key.ToString() != "F")
                     {
                         Console.WriteLine("Invalid input please try again");
+
                     }
                 } while (!correct);
 
 
                 await host.RunAsync();
+
             }
             catch (Exception ex)
             {
