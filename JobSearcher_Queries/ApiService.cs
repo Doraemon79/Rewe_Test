@@ -19,11 +19,51 @@ namespace JobSearcher_Queries
             _httpClient = httpClient;
         }
 
+        //generic request method
+        //
+        public async Task<TResponse> SendAsync<TRequest, TResponse>(HttpMethod method, string url, TRequest data, string authCode = null, string accessToken = null)
+        {
+
+            var request = new HttpRequestMessage(method, url);
+            if (authCode != null)
+            {
+                request.Headers.Add("application-auth-code", authCode);
+            }
+
+            // Serialize the request data to JSON
+            var json = JsonSerializer.Serialize(data);
+            request.Content = new StringContent(json, Encoding.UTF8, "application/json");
+
+            // Set authorization header if access token is provided
+            if (!string.IsNullOrEmpty(accessToken))
+            {
+                request.Headers.Authorization = new AuthenticationHeaderValue("bearer", accessToken);
+            }
+
+            // Make the HTTP POST request
+            var response = await _httpClient.SendAsync(request);
+            if (!response.IsSuccessStatusCode)
+            {
+                Console.WriteLine($"Error: {response.StatusCode}");
+            }
+
+            var responseJson = await response.Content.ReadAsStringAsync();
+            if (string.IsNullOrEmpty(responseJson))
+            {
+                Console.WriteLine($"Status code is:{response.StatusCode}");
+                return default(TResponse);
+            }
+            var result = JsonSerializer.Deserialize<TResponse>(responseJson);
+            return result;
+
+        }
+
         // This method is used to post the credentials to the API
         public async Task<IActionResult> PostCredentials(string token, Credential credential)
         {
             var request = new HttpRequestMessage(HttpMethod.Post, "https://dev.apply.rewe-group.at:443/V1/api/job-applications/credentials");
 
+            //dummy values for the recaptcha test, very annoying they do not allow me to use a generic call
             request.Headers.Add("ChallengeType", "recaptcha");
             request.Headers.Add("ChallengeKey", "123");
 

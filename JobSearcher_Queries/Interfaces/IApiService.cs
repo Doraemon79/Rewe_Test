@@ -5,6 +5,7 @@ namespace JobSearcher_Queries.Interfaces
 {
     public interface IApiService
     {
+        Task<TResponse> SendAsync<TRequest, TResponse>(HttpMethod method, string url, TRequest data, string authCode = null, string accessToken = null);
         Task<IActionResult> PostCredentials(string token, Credential credential);
         Task<IActionResult> PostSearchAsync(string token, Filter filter);
         Task<IActionResult> PostSubmit(string token, int applicationId, SubmitDetails submitDetails, string authCode);

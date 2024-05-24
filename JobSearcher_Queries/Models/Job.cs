@@ -33,9 +33,9 @@
         public string districtName { get; set; }
         public string startDate { get; set; }
         public string creationDate { get; set; }
-        public int hours { get; set; }
-        public int minHours { get; set; }
-        public int maxHours { get; set; }
+        public double hours { get; set; }
+        public double minHours { get; set; }
+        public double maxHours { get; set; }
         public int amountOfJobs { get; set; }
         public List<Stores> stores { get; set; }
         public List<Links> links { get; set; }

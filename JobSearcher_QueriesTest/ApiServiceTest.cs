@@ -3,11 +3,22 @@ using JobSearcher_Queries.Models;
 using Moq;
 using Moq.Protected;
 using System.Net;
+using System.Net.Http.Headers;
+using System.Text;
+using System.Text.Json;
 
 namespace JobSearcher_QueriesTest
 {
-    public class ApiServiceTest
+    public class ApiServiceTests
     {
+        private readonly Mock<HttpClient> _httpClientMock;
+        private readonly ApiService _apiService;
+
+        public ApiServiceTests()
+        {
+            _httpClientMock = new Mock<HttpClient>();
+            _apiService = new ApiService(_httpClientMock.Object);
+        }
 
         [Fact]
         public async Task PostCredentials_ShouldReturnResponse()
@@ -45,37 +56,114 @@ namespace JobSearcher_QueriesTest
             Assert.Equal("Microsoft.AspNetCore.Mvc.OkObjectResult", result.ToString());
         }
 
-        //[Fact]
-        //public async Task PostSubmit_ShouldReturnResponse()
-        //{
-        //    // Arrange
-        //    SubmitDetails submitDetails = new SubmitDetails();
-        //    submitDetails.jobId = "123";
-        //    submitDetails.desiredSalary = 1000;
+        [Fact]
+        public async Task SendAsync_ShouldThrowException_OnHttpRequestException()
+        {
+            // Arrange
+            var url = "https://api.example.com/endpoint";
+            var requestData = new { Id = 1, Name = "Test" };
+            var authCode = "123";
+            var accessToken = "token";
 
-        //    var responseMessage = new HttpResponseMessage(HttpStatusCode.OK)
-        //    {
-        //        Content = new StringContent("{\"id\":7129,\"authCode\":\"240ITlvQ6tE617\",\"expirationTimestamp\":\"23.05.2024 23:41:40\"}")
-        //    };
+            var handlerMock = new Mock<HttpMessageHandler>();
+            handlerMock.Protected()
+                .Setup<Task<HttpResponseMessage>>(
+                    "SendAsync",
+                    ItExpr.IsAny<HttpRequestMessage>(),
+                    ItExpr.IsAny<CancellationToken>())
+                .ThrowsAsync(new HttpRequestException("Network error"));
 
-        //    var handlerMock = new Mock<HttpMessageHandler>();
-        //    handlerMock
-        //        .Protected()
-        //        .Setup<Task<HttpResponseMessage>>(
-        //            "SendAsync",
-        //            ItExpr.IsAny<HttpRequestMessage>(),
-        //            ItExpr.IsAny<CancellationToken>()
-        //        )
-        //        .ReturnsAsync(responseMessage);
+            var httpClient = new HttpClient(handlerMock.Object);
+            var apiService = new ApiService(httpClient);
+            // Act & Assert
+            await Assert.ThrowsAsync<HttpRequestException>(() =>
+                apiService.SendAsync<object, object>(HttpMethod.Post, url, requestData, authCode, accessToken));
+        }
 
-        //    var httpClient = new HttpClient(handlerMock.Object);
-        //    var apiService = new ApiService(httpClient);
+        [Fact]
+        public async Task SendAsync_ShouldReturnResponse()
+        {
+            // Arrange
+            var method = HttpMethod.Post;
+            var url = "https://dev.apply.rewe-group.at:443/V1/api/job-applications/7129/submit";
+            var requestData = new { Key = "Value" };
+            var authCode = "123";
+            var accessToken = "token";
+            var expectedResponse = new HttpResponseMessage(HttpStatusCode.OK);
 
-        //    // Act
-        //    var result = await apiService.PostSubmit("123", "123", submitDetails, "Test_authCode");
+            var requestMessage = new HttpRequestMessage(method, url);
+            requestMessage.Headers.Add("application-auth-code", authCode);
+            requestMessage.Content = new StringContent(JsonSerializer.Serialize(requestData), Encoding.UTF8, "application/json");
+            requestMessage.Headers.Authorization = new AuthenticationHeaderValue("bearer", accessToken);
 
-        //    // Assert
-        //    Assert.Equal("Microsoft.AspNetCore.Mvc.OkObjectResult", result.Result.ToString());
-        //}
+            var responseMessage = new HttpResponseMessage(HttpStatusCode.OK);
+            responseMessage.Content = new StringContent(JsonSerializer.Serialize(expectedResponse), Encoding.UTF8, "application/json");
+
+            _httpClientMock
+                .Setup(client => client.SendAsync(It.IsAny<HttpRequestMessage>(), It.IsAny<CancellationToken>()))
+                .ReturnsAsync(responseMessage);
+
+            // Act
+            var response = await _apiService.SendAsync<object, HttpResponseMessage>(method, url, requestData, authCode, accessToken);
+
+            // Assert
+            Assert.Equal(expectedResponse.StatusCode, response.StatusCode);
+        }
+
+        [Fact]
+        public async Task SendAsync_WhenResponseIsNotSuccessful_ReturnsDefaultTResponse()
+        {
+            // Arrange
+            var method = HttpMethod.Post;
+            var url = "https://dev.apply.rewe-group.at:443/V1/api/job-applications/7129/submit";
+            var data = new { Key = "Value" };
+            var authCode = "123";
+            var accessToken = "token";
+            var expectedResponse = new HttpResponseMessage(HttpStatusCode.BadRequest);
+
+            var request = new HttpRequestMessage(method, url);
+            request.Headers.Add("application-auth-code", authCode);
+            var json = JsonSerializer.Serialize(data);
+            request.Content = new StringContent(json, Encoding.UTF8, "application/json");
+            request.Headers.Authorization = new AuthenticationHeaderValue("bearer", accessToken);
+
+            var response = new HttpResponseMessage(HttpStatusCode.BadRequest);
+
+
+            _httpClientMock
+                .Setup(client => client.SendAsync(request, CancellationToken.None))
+                .ReturnsAsync(response);
+
+            // Act
+            var result = await _apiService.SendAsync<object, HttpResponseMessage>(method, url, data, authCode, accessToken);
+
+            // Assert
+            Assert.Equal(expectedResponse.StatusCode, result.StatusCode);
+        }
+
+        [Fact]
+        public async Task SendAsync_ReturnsDefaultResponse_WhenResponseIsNotSuccessful()
+        {
+            // Arrange
+            var httpClientMock = new Mock<HttpClient>();
+            var apiService = new ApiService(httpClientMock.Object);
+            var method = HttpMethod.Post;
+            var url = "https://dev.apply.rewe-group.at:443/V1/api/job-applications/7129/submit";
+            var data = new { Key = "Value" };
+            var authCode = "123";
+
+            var accessToken = "token";
+
+            // Set up the mock HttpClient to return a non-successful response
+            var nonSuccessfulResponse = new HttpResponseMessage(HttpStatusCode.BadRequest);
+            _httpClientMock
+                .Setup(client => client.SendAsync(It.IsAny<HttpRequestMessage>(), It.IsAny<CancellationToken>()))
+                .ReturnsAsync(nonSuccessfulResponse);
+            // Act
+            var response = await _apiService.SendAsync<object, HttpResponseMessage>(method, url, data, authCode, accessToken);
+
+            // Assert
+            Assert.Equal(default(HttpResponseMessage), response);
+        }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using JobSearcher_Queries.Models;
 using Rewe_JobSearcher.Interfaces;
+using System.Globalization;
 using System.Text;
 using System.Text.Json;
 
@@ -112,6 +113,62 @@ namespace Rewe_JobSearcher.BusinessLogic
                 Console.WriteLine("Invalid path");
             }
             return document;
+        }
+
+        public Applicant ApplicantFiller()
+        {
+            var cultureInfo = new CultureInfo("de-DE");
+            Applicant applicant = new Applicant();
+            Console.WriteLine();
+            Console.WriteLine("Please write your family name ");
+            applicant.lastName = Console.ReadLine();
+            Console.WriteLine();
+            Console.WriteLine("Please write your Nationality code (3 letters Ex: ITA, AUT. Default is AUT) ");
+            applicant.nationality = Console.ReadLine();
+            Console.WriteLine();
+            Console.WriteLine("Please write your country code  code (3 letters Ex: +39, +43Default is +43) ");
+            applicant.nationality = Console.ReadLine();
+            Console.WriteLine();
+            Console.WriteLine("Please write your bith date ");
+            string date = Console.ReadLine();
+            applicant.birthDate = DateTime.Parse(date, cultureInfo);
+            return applicant;
+        }
+
+        public void ShowJobs(SearchResponse response)
+        {
+            Console.WriteLine(response.numberOfHits);
+            Console.WriteLine(response.totalCount);
+            foreach (var job in response.jobs)
+            {
+                Console.WriteLine("Job Id is" + job.jobId);
+                Console.WriteLine("Job Title is" + job.title);
+                Console.WriteLine("Location is:" + job.city);
+                Console.WriteLine("zip is:" + job.zip);
+                Console.WriteLine("Job Level is" + job.employmentLevel);
+                Console.WriteLine("Description:" + job.jobDescriptionId);
+            }
+
+        }
+        public void ShowSubmitResponse(SubmitResponse response)
+        {
+            if (response.id != 0)
+            {
+                Console.WriteLine("You submitted succesfuly for the job with Id:" + response.id);
+                Console.WriteLine("for this job we received the following documents:");
+                foreach (var document in response.documents)
+                {
+                    Console.WriteLine($"Document of type {document.documentType} with name {document.documentName}");
+                }
+            }
+        }
+
+        public void ShowDocumentsResponse(DocumentResponse documentsResponse)
+        {
+            if (documentsResponse.DocumentName != null)
+            {
+                Console.WriteLine($"Document of type {documentsResponse.DocumentType} with name {documentsResponse.DocumentName}");
+            }
         }
 
         private string ExtractAccessToken(string jsonResponse)

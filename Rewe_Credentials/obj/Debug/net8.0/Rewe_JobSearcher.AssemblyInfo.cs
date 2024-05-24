@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Rewe_JobSearcher")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+671b847f71ee4a65638d4664a09fee91ab73fd81")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d76f8f5e4c6b5e3f189adbe0c70bf2031f37fb02")]
 [assembly: System.Reflection.AssemblyProductAttribute("Rewe_JobSearcher")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Rewe_JobSearcher")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

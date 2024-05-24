@@ -31,9 +31,9 @@ namespace Rewe_JobSearcher
                 var CredentialsLogicService = host.Services.GetRequiredService<ICredentialsLogic>();
 
                 string token = CredentialsLogicService.GetToken().Result;
-                bool correct = false;
                 Credential credential = new Credential();
                 await apiService.PostCredentials(token, credential);
+                bool correct = false;
                 do
                 {
 
@@ -44,30 +44,36 @@ namespace Rewe_JobSearcher
                     if (cki.Key.ToString() == "R")
                     {
                         Filter filter = CredentialsLogicService.GetFilter();
-                        await apiService.PostSearchAsync(token, filter);
-
+                        var response = await apiService.SendAsync<Filter, SearchResponse>(HttpMethod.Post, "https://dev.apply.rewe-group.at:443/V1/api/jobs/search", filter, null, token);
+                        CredentialsLogicService.ShowJobs(response);
                     }
                     if (cki.Key.ToString() == "S")
                     {
+                        var submitRequest = new SubmitRequest();
                         Console.WriteLine("Please insert the JobId");
-                        string jobId = Console.ReadLine();
-                        var submitDetails = new SubmitDetails();
-                        submitDetails.jobId = jobId;
-                        apiService.PostSubmit(token, credential.Id, submitDetails, credential.AuthCode);
+                        submitRequest.jobId = Console.ReadLine();
+                        submitRequest.Id = credential.Id;
+
+                        var response = await apiService.SendAsync<SubmitRequest, SubmitResponse>(HttpMethod.Post, "https://dev.apply.rewe-group.at:443/V1/api/job-applications/" + credential.Id + "/submit", submitRequest, credential.AuthCode, token);
+                        CredentialsLogicService.ShowSubmitResponse(response);
                     }
                     if (cki.Key.ToString() == "D")
                     {
                         ApplicantDocument document = new ApplicantDocument();
                         document = CredentialsLogicService.DocumentFiller();
-                        await apiService.PostDocuments(token, credential.Id, document, credential.AuthCode);
-                    }
-                    if (cki.Key.ToString() == "K")
-                    {
-                        Environment.Exit(0);
+
+                        var response = await apiService.SendAsync<ApplicantDocument, DocumentResponse>(HttpMethod.Post, "https://dev.apply.rewe-group.at:443/V1/api/job-applications/" + credential.Id + "/documents", document, credential.AuthCode, token);
+                        CredentialsLogicService.ShowDocumentsResponse(response);
                     }
                     if (cki.Key.ToString() == "F")
                     {
-                        await apiService.PutApplicantProfile(token, credential.Id, credential.AuthCode);
+                        Applicant applicant = CredentialsLogicService.ApplicantFiller();
+                        var response = await apiService.SendAsync<Applicant, Applicant>(HttpMethod.Put, "https://dev.apply.rewe-group.at:443/V1/api/job-applications/" + credential.Id + "/applicant", applicant, credential.AuthCode, token);
+                    }
+                    if (cki.Key.ToString() == "K")
+                    {
+                        correct = true;
+                        Environment.Exit(0);
                     }
                     if (cki.Key.ToString() != "R" && cki.Key.ToString() != "S" && cki.Key.ToString() != "D" && cki.Key.ToString() != "K" && cki.Key.ToString() != "F")
                     {
