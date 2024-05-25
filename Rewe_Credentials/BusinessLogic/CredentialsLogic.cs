@@ -126,7 +126,7 @@ namespace Rewe_JobSearcher.BusinessLogic
             Console.WriteLine("Please write your Nationality code (3 letters Ex: ITA, AUT. Default is AUT) ");
             applicant.nationality = Console.ReadLine();
             Console.WriteLine();
-            Console.WriteLine("Please write your country code  code (3 letters Ex: +39, +43Default is +43) ");
+            Console.WriteLine("Please write your country code  code (3 letters Ex: +39, +43 ... Default is +43) ");
             applicant.nationality = Console.ReadLine();
             Console.WriteLine();
             Console.WriteLine("Please write your bith date ");
@@ -141,12 +141,12 @@ namespace Rewe_JobSearcher.BusinessLogic
             Console.WriteLine(response.totalCount);
             foreach (var job in response.jobs)
             {
-                Console.WriteLine("Job Id is" + job.jobId);
-                Console.WriteLine("Job Title is" + job.title);
-                Console.WriteLine("Location is:" + job.city);
-                Console.WriteLine("zip is:" + job.zip);
-                Console.WriteLine("Job Level is" + job.employmentLevel);
-                Console.WriteLine("Description:" + job.jobDescriptionId);
+                Console.WriteLine("Job Id is: " + job.jobId);
+                Console.WriteLine("Job DescriptionIdId is: " + job.jobDescriptionId);
+                Console.WriteLine("Job Title is: " + job.title);
+                Console.WriteLine("Location is: " + job.city);
+                Console.WriteLine("zip is: " + job.zip);
+                Console.WriteLine("Job Level is: " + job.employmentLevel);
             }
 
         }
@@ -165,9 +165,29 @@ namespace Rewe_JobSearcher.BusinessLogic
 
         public void ShowDocumentsResponse(DocumentResponse documentsResponse)
         {
-            if (documentsResponse.DocumentName != null)
+            if (!string.IsNullOrEmpty(documentsResponse.DocumentName))
             {
-                Console.WriteLine($"Document of type {documentsResponse.DocumentType} with name {documentsResponse.DocumentName}");
+                Console.WriteLine($"Document of type {documentsResponse.DocumentType} with name {documentsResponse.DocumentName} and Id: {documentsResponse.DocumentId} has been  uploaded");
+            }
+        }
+
+        //helper to show a reduced  description of the job
+        public void ShowDocumentsResponse(JobDescriptionResponse jobDescriptionResponse)
+        {
+            if (!string.IsNullOrEmpty(jobDescriptionResponse.jobDescriptionId))
+            {
+                Console.WriteLine($"Job description with id {jobDescriptionResponse.jobDescriptionId} has been retrieved");
+                Console.WriteLine($"The job description is: {jobDescriptionResponse.description}");
+            }
+        }
+
+        //Helper to show a reduced detailed description of the job
+        public void ShowJobWithDetailedDescriptionResponseResponse(JobWithDetailedDescriptionResponse jobWithDetailedDescriptionResponse)
+        {
+            if (!string.IsNullOrEmpty(jobWithDetailedDescriptionResponse.job.jobDescriptionId))
+            {
+                ShowDocumentsResponse(jobWithDetailedDescriptionResponse.description);
+                Console.WriteLine($"Job accountingCompany is: {jobWithDetailedDescriptionResponse.job.accountingCompany}");
             }
         }
 

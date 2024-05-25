@@ -3,16 +3,56 @@
   "WorkspaceRootPath": "C:\\Repos\\Rewe_test\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C7F2DEFF-8413-44B8-98EC-3ED2326881EA}|JobSearcher_QueriesTest\\JobSearcher_QueriesTest.csproj|c:\\repos\\rewe_test\\jobsearcher_queriestest\\apiservicetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C7F2DEFF-8413-44B8-98EC-3ED2326881EA}|JobSearcher_QueriesTest\\JobSearcher_QueriesTest.csproj|solutionrelative:jobsearcher_queriestest\\apiservicetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{FA925405-6461-4CBD-9EAA-2BD1ACA2BBDD}|JobSearcher_Queries\\JobSearcher_Queries.csproj|c:\\repos\\rewe_test\\jobsearcher_queries\\apiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FA925405-6461-4CBD-9EAA-2BD1ACA2BBDD}|JobSearcher_Queries\\JobSearcher_Queries.csproj|solutionrelative:jobsearcher_queries\\apiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{25D08E45-A8B7-437A-97F9-D9F116342FD5}|Rewe_Credentials\\Rewe_JobSearcher.csproj|c:\\repos\\rewe_test\\rewe_credentials\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{25D08E45-A8B7-437A-97F9-D9F116342FD5}|Rewe_Credentials\\Rewe_JobSearcher.csproj|solutionrelative:rewe_credentials\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA925405-6461-4CBD-9EAA-2BD1ACA2BBDD}|JobSearcher_Queries\\JobSearcher_Queries.csproj|c:\\repos\\rewe_test\\jobsearcher_queries\\interfaces\\iapiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA925405-6461-4CBD-9EAA-2BD1ACA2BBDD}|JobSearcher_Queries\\JobSearcher_Queries.csproj|solutionrelative:jobsearcher_queries\\interfaces\\iapiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{25D08E45-A8B7-437A-97F9-D9F116342FD5}|Rewe_Credentials\\Rewe_JobSearcher.csproj|c:\\repos\\rewe_test\\rewe_credentials\\businesslogic\\credentialslogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{25D08E45-A8B7-437A-97F9-D9F116342FD5}|Rewe_Credentials\\Rewe_JobSearcher.csproj|solutionrelative:rewe_credentials\\businesslogic\\credentialslogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{25D08E45-A8B7-437A-97F9-D9F116342FD5}|Rewe_Credentials\\Rewe_JobSearcher.csproj|c:\\repos\\rewe_test\\rewe_credentials\\interfaces\\icredentialslogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{25D08E45-A8B7-437A-97F9-D9F116342FD5}|Rewe_Credentials\\Rewe_JobSearcher.csproj|solutionrelative:rewe_credentials\\interfaces\\icredentialslogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA925405-6461-4CBD-9EAA-2BD1ACA2BBDD}|JobSearcher_Queries\\JobSearcher_Queries.csproj|c:\\repos\\rewe_test\\jobsearcher_queries\\models\\job.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA925405-6461-4CBD-9EAA-2BD1ACA2BBDD}|JobSearcher_Queries\\JobSearcher_Queries.csproj|solutionrelative:jobsearcher_queries\\models\\job.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA925405-6461-4CBD-9EAA-2BD1ACA2BBDD}|JobSearcher_Queries\\JobSearcher_Queries.csproj|c:\\repos\\rewe_test\\jobsearcher_queries\\models\\jobwithdetaileddescriptionresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA925405-6461-4CBD-9EAA-2BD1ACA2BBDD}|JobSearcher_Queries\\JobSearcher_Queries.csproj|solutionrelative:jobsearcher_queries\\models\\jobwithdetaileddescriptionresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA925405-6461-4CBD-9EAA-2BD1ACA2BBDD}|JobSearcher_Queries\\JobSearcher_Queries.csproj|c:\\repos\\rewe_test\\jobsearcher_queries\\models\\jobdescriptionresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA925405-6461-4CBD-9EAA-2BD1ACA2BBDD}|JobSearcher_Queries\\JobSearcher_Queries.csproj|solutionrelative:jobsearcher_queries\\models\\jobdescriptionresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA925405-6461-4CBD-9EAA-2BD1ACA2BBDD}|JobSearcher_Queries\\JobSearcher_Queries.csproj|c:\\repos\\rewe_test\\jobsearcher_queries\\models\\submitrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA925405-6461-4CBD-9EAA-2BD1ACA2BBDD}|JobSearcher_Queries\\JobSearcher_Queries.csproj|solutionrelative:jobsearcher_queries\\models\\submitrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA925405-6461-4CBD-9EAA-2BD1ACA2BBDD}|JobSearcher_Queries\\JobSearcher_Queries.csproj|c:\\repos\\rewe_test\\jobsearcher_queries\\models\\emptygenericrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA925405-6461-4CBD-9EAA-2BD1ACA2BBDD}|JobSearcher_Queries\\JobSearcher_Queries.csproj|solutionrelative:jobsearcher_queries\\models\\emptygenericrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA925405-6461-4CBD-9EAA-2BD1ACA2BBDD}|JobSearcher_Queries\\JobSearcher_Queries.csproj|c:\\repos\\rewe_test\\jobsearcher_queries\\models\\applicantdocument.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA925405-6461-4CBD-9EAA-2BD1ACA2BBDD}|JobSearcher_Queries\\JobSearcher_Queries.csproj|solutionrelative:jobsearcher_queries\\models\\applicantdocument.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA925405-6461-4CBD-9EAA-2BD1ACA2BBDD}|JobSearcher_Queries\\JobSearcher_Queries.csproj|c:\\repos\\rewe_test\\jobsearcher_queries\\models\\applicantdocumentrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA925405-6461-4CBD-9EAA-2BD1ACA2BBDD}|JobSearcher_Queries\\JobSearcher_Queries.csproj|solutionrelative:jobsearcher_queries\\models\\applicantdocumentrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA925405-6461-4CBD-9EAA-2BD1ACA2BBDD}|JobSearcher_Queries\\JobSearcher_Queries.csproj|c:\\repos\\rewe_test\\jobsearcher_queries\\models\\emptygenericresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA925405-6461-4CBD-9EAA-2BD1ACA2BBDD}|JobSearcher_Queries\\JobSearcher_Queries.csproj|solutionrelative:jobsearcher_queries\\models\\emptygenericresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FA925405-6461-4CBD-9EAA-2BD1ACA2BBDD}|JobSearcher_Queries\\JobSearcher_Queries.csproj|c:\\repos\\rewe_test\\jobsearcher_queries\\models\\applicant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -27,14 +67,6 @@
       "RelativeMoniker": "D:0:0:{FA925405-6461-4CBD-9EAA-2BD1ACA2BBDD}|JobSearcher_Queries\\JobSearcher_Queries.csproj|solutionrelative:jobsearcher_queries\\models\\submitdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FA925405-6461-4CBD-9EAA-2BD1ACA2BBDD}|JobSearcher_Queries\\JobSearcher_Queries.csproj|c:\\repos\\rewe_test\\jobsearcher_queries\\models\\applicantdocument.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FA925405-6461-4CBD-9EAA-2BD1ACA2BBDD}|JobSearcher_Queries\\JobSearcher_Queries.csproj|solutionrelative:jobsearcher_queries\\models\\applicantdocument.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FA925405-6461-4CBD-9EAA-2BD1ACA2BBDD}|JobSearcher_Queries\\JobSearcher_Queries.csproj|c:\\repos\\rewe_test\\jobsearcher_queries\\models\\submitrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FA925405-6461-4CBD-9EAA-2BD1ACA2BBDD}|JobSearcher_Queries\\JobSearcher_Queries.csproj|solutionrelative:jobsearcher_queries\\models\\submitrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{FA925405-6461-4CBD-9EAA-2BD1ACA2BBDD}|JobSearcher_Queries\\JobSearcher_Queries.csproj|c:\\repos\\rewe_test\\jobsearcher_queries\\models\\applicationdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FA925405-6461-4CBD-9EAA-2BD1ACA2BBDD}|JobSearcher_Queries\\JobSearcher_Queries.csproj|solutionrelative:jobsearcher_queries\\models\\applicationdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -47,24 +79,8 @@
       "RelativeMoniker": "D:0:0:{FA925405-6461-4CBD-9EAA-2BD1ACA2BBDD}|JobSearcher_Queries\\JobSearcher_Queries.csproj|solutionrelative:jobsearcher_queries\\models\\documents.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{25D08E45-A8B7-437A-97F9-D9F116342FD5}|Rewe_Credentials\\Rewe_JobSearcher.csproj|c:\\repos\\rewe_test\\rewe_credentials\\businesslogic\\credentialslogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{25D08E45-A8B7-437A-97F9-D9F116342FD5}|Rewe_Credentials\\Rewe_JobSearcher.csproj|solutionrelative:rewe_credentials\\businesslogic\\credentialslogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{25D08E45-A8B7-437A-97F9-D9F116342FD5}|Rewe_Credentials\\Rewe_JobSearcher.csproj|c:\\repos\\rewe_test\\rewe_credentials\\interfaces\\icredentialslogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{25D08E45-A8B7-437A-97F9-D9F116342FD5}|Rewe_Credentials\\Rewe_JobSearcher.csproj|solutionrelative:rewe_credentials\\interfaces\\icredentialslogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{FA925405-6461-4CBD-9EAA-2BD1ACA2BBDD}|JobSearcher_Queries\\JobSearcher_Queries.csproj|c:\\repos\\rewe_test\\jobsearcher_queries\\models\\searchresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FA925405-6461-4CBD-9EAA-2BD1ACA2BBDD}|JobSearcher_Queries\\JobSearcher_Queries.csproj|solutionrelative:jobsearcher_queries\\models\\searchresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FA925405-6461-4CBD-9EAA-2BD1ACA2BBDD}|JobSearcher_Queries\\JobSearcher_Queries.csproj|c:\\repos\\rewe_test\\jobsearcher_queries\\models\\job.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FA925405-6461-4CBD-9EAA-2BD1ACA2BBDD}|JobSearcher_Queries\\JobSearcher_Queries.csproj|solutionrelative:jobsearcher_queries\\models\\job.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FA925405-6461-4CBD-9EAA-2BD1ACA2BBDD}|JobSearcher_Queries\\JobSearcher_Queries.csproj|c:\\repos\\rewe_test\\jobsearcher_queries\\models\\applicantdocumentrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FA925405-6461-4CBD-9EAA-2BD1ACA2BBDD}|JobSearcher_Queries\\JobSearcher_Queries.csproj|solutionrelative:jobsearcher_queries\\models\\applicantdocumentrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FA925405-6461-4CBD-9EAA-2BD1ACA2BBDD}|JobSearcher_Queries\\JobSearcher_Queries.csproj|c:\\repos\\rewe_test\\jobsearcher_queries\\models\\jobapplicationresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -97,10 +113,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{25D08E45-A8B7-437A-97F9-D9F116342FD5}|Rewe_Credentials\\Rewe_JobSearcher.csproj|c:\\repos\\rewe_test\\rewe_credentials\\businesslogic\\searchforjobs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{25D08E45-A8B7-437A-97F9-D9F116342FD5}|Rewe_Credentials\\Rewe_JobSearcher.csproj|solutionrelative:rewe_credentials\\businesslogic\\searchforjobs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FA925405-6461-4CBD-9EAA-2BD1ACA2BBDD}|JobSearcher_Queries\\JobSearcher_Queries.csproj|c:\\repos\\rewe_test\\jobsearcher_queries\\models\\jobdescription.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FA925405-6461-4CBD-9EAA-2BD1ACA2BBDD}|JobSearcher_Queries\\JobSearcher_Queries.csproj|solutionrelative:jobsearcher_queries\\models\\jobdescription.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FA925405-6461-4CBD-9EAA-2BD1ACA2BBDD}|JobSearcher_Queries\\JobSearcher_Queries.csproj|c:\\repos\\rewe_test\\jobsearcher_queries\\models\\jobgroups.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -144,17 +156,17 @@
         },
         {
           "DockedWidth": 264,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Repos\\Rewe_test\\Rewe_Credentials\\Program.cs",
               "RelativeDocumentMoniker": "Rewe_Credentials\\Program.cs",
               "ToolTip": "C:\\Repos\\Rewe_test\\Rewe_Credentials\\Program.cs",
               "RelativeToolTip": "Rewe_Credentials\\Program.cs",
-              "ViewState": "AQIAACUAAAAAAAAAAAAgwC4AAAAyAAAA",
+              "ViewState": "AQIAAFIAAAAAAAAAAADwv1sAAAAgAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-21T14:02:56.067Z",
               "IsPinned": true,
@@ -162,21 +174,73 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ApiServiceTest.cs",
-              "DocumentMoniker": "C:\\Repos\\Rewe_test\\JobSearcher_QueriesTest\\ApiServiceTest.cs",
-              "RelativeDocumentMoniker": "JobSearcher_QueriesTest\\ApiServiceTest.cs",
-              "ToolTip": "C:\\Repos\\Rewe_test\\JobSearcher_QueriesTest\\ApiServiceTest.cs",
-              "RelativeToolTip": "JobSearcher_QueriesTest\\ApiServiceTest.cs",
-              "ViewState": "AQIAAEYAAAAAAAAAAAD4v1MAAAA6AAAA",
+              "DocumentIndex": 3,
+              "Title": "CredentialsLogic.cs",
+              "DocumentMoniker": "C:\\Repos\\Rewe_test\\Rewe_Credentials\\BusinessLogic\\CredentialsLogic.cs",
+              "RelativeDocumentMoniker": "Rewe_Credentials\\BusinessLogic\\CredentialsLogic.cs",
+              "ToolTip": "C:\\Repos\\Rewe_test\\Rewe_Credentials\\BusinessLogic\\CredentialsLogic.cs",
+              "RelativeToolTip": "Rewe_Credentials\\BusinessLogic\\CredentialsLogic.cs",
+              "ViewState": "AQIAAGUAAAAAAAAAAAAAwKUAAAApAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-21T21:06:23.571Z",
+              "WhenOpened": "2024-05-21T14:20:06.051Z",
               "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 6,
+              "Title": "JobWithDetailedDescriptionResponse.cs",
+              "DocumentMoniker": "C:\\Repos\\Rewe_test\\JobSearcher_Queries\\Models\\JobWithDetailedDescriptionResponse.cs",
+              "RelativeDocumentMoniker": "JobSearcher_Queries\\Models\\JobWithDetailedDescriptionResponse.cs",
+              "ToolTip": "C:\\Repos\\Rewe_test\\JobSearcher_Queries\\Models\\JobWithDetailedDescriptionResponse.cs",
+              "RelativeToolTip": "JobSearcher_Queries\\Models\\JobWithDetailedDescriptionResponse.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAQAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-25T12:40:56.096Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "EmptyGenericRequest.cs",
+              "DocumentMoniker": "C:\\Repos\\Rewe_test\\JobSearcher_Queries\\Models\\EmptyGenericRequest.cs",
+              "RelativeDocumentMoniker": "JobSearcher_Queries\\Models\\EmptyGenericRequest.cs",
+              "ToolTip": "C:\\Repos\\Rewe_test\\JobSearcher_Queries\\Models\\EmptyGenericRequest.cs",
+              "RelativeToolTip": "JobSearcher_Queries\\Models\\EmptyGenericRequest.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-25T09:24:45.92Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "EmptyGenericResponse.cs",
+              "DocumentMoniker": "C:\\Repos\\Rewe_test\\JobSearcher_Queries\\Models\\EmptyGenericResponse.cs",
+              "RelativeDocumentMoniker": "JobSearcher_Queries\\Models\\EmptyGenericResponse.cs",
+              "ToolTip": "C:\\Repos\\Rewe_test\\JobSearcher_Queries\\Models\\EmptyGenericResponse.cs",
+              "RelativeToolTip": "JobSearcher_Queries\\Models\\EmptyGenericResponse.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-25T09:23:23.758Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IApiService.cs",
+              "DocumentMoniker": "C:\\Repos\\Rewe_test\\JobSearcher_Queries\\Interfaces\\IApiService.cs",
+              "RelativeDocumentMoniker": "JobSearcher_Queries\\Interfaces\\IApiService.cs",
+              "ToolTip": "C:\\Repos\\Rewe_test\\JobSearcher_Queries\\Interfaces\\IApiService.cs",
+              "RelativeToolTip": "JobSearcher_Queries\\Interfaces\\IApiService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAcAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-25T09:07:14.061Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "SubmitRequest.cs",
               "DocumentMoniker": "C:\\Repos\\Rewe_test\\JobSearcher_Queries\\Models\\SubmitRequest.cs",
               "RelativeDocumentMoniker": "JobSearcher_Queries\\Models\\SubmitRequest.cs",
@@ -189,7 +253,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 14,
               "Title": "SubmitResponse.cs",
               "DocumentMoniker": "C:\\Repos\\Rewe_test\\JobSearcher_Queries\\Models\\SubmitResponse.cs",
               "RelativeDocumentMoniker": "JobSearcher_Queries\\Models\\SubmitResponse.cs",
@@ -202,20 +266,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "ApiService.cs",
               "DocumentMoniker": "C:\\Repos\\Rewe_test\\JobSearcher_Queries\\ApiService.cs",
               "RelativeDocumentMoniker": "JobSearcher_Queries\\ApiService.cs",
               "ToolTip": "C:\\Repos\\Rewe_test\\JobSearcher_Queries\\ApiService.cs",
               "RelativeToolTip": "JobSearcher_Queries\\ApiService.cs",
-              "ViewState": "AQIAACIAAAAAAAAAAAAIwDcAAAAMAAAA",
+              "ViewState": "AQIAABcAAAAAAAAAAAAQwBoAAABHAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-21T18:21:41.808Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 18,
               "Title": "documents.cs",
               "DocumentMoniker": "C:\\Repos\\Rewe_test\\JobSearcher_Queries\\Models\\documents.cs",
               "RelativeDocumentMoniker": "JobSearcher_Queries\\Models\\documents.cs",
@@ -228,7 +292,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 10,
               "Title": "ApplicantDocument.cs",
               "DocumentMoniker": "C:\\Repos\\Rewe_test\\JobSearcher_Queries\\Models\\ApplicantDocument.cs",
               "RelativeDocumentMoniker": "JobSearcher_Queries\\Models\\ApplicantDocument.cs",
@@ -241,7 +305,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 16,
               "Title": "applicationDetails.cs",
               "DocumentMoniker": "C:\\Repos\\Rewe_test\\JobSearcher_Queries\\Models\\applicationDetails.cs",
               "RelativeDocumentMoniker": "JobSearcher_Queries\\Models\\applicationDetails.cs",
@@ -254,7 +318,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 15,
               "Title": "SubmitDetails.cs",
               "DocumentMoniker": "C:\\Repos\\Rewe_test\\JobSearcher_Queries\\Models\\SubmitDetails.cs",
               "RelativeDocumentMoniker": "JobSearcher_Queries\\Models\\SubmitDetails.cs",
@@ -267,7 +331,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 13,
               "Title": "Applicant.cs",
               "DocumentMoniker": "C:\\Repos\\Rewe_test\\JobSearcher_Queries\\Models\\Applicant.cs",
               "RelativeDocumentMoniker": "JobSearcher_Queries\\Models\\Applicant.cs",
@@ -280,46 +344,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 4,
               "Title": "ICredentialsLogic.cs",
               "DocumentMoniker": "C:\\Repos\\Rewe_test\\Rewe_Credentials\\Interfaces\\ICredentialsLogic.cs",
               "RelativeDocumentMoniker": "Rewe_Credentials\\Interfaces\\ICredentialsLogic.cs",
               "ToolTip": "C:\\Repos\\Rewe_test\\Rewe_Credentials\\Interfaces\\ICredentialsLogic.cs",
               "RelativeToolTip": "Rewe_Credentials\\Interfaces\\ICredentialsLogic.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAiAAAA",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAcAAAAbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-21T14:37:49.298Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 5,
               "Title": "Job.cs",
               "DocumentMoniker": "C:\\Repos\\Rewe_test\\JobSearcher_Queries\\Models\\Job.cs",
               "RelativeDocumentMoniker": "JobSearcher_Queries\\Models\\Job.cs",
               "ToolTip": "C:\\Repos\\Rewe_test\\JobSearcher_Queries\\Models\\Job.cs",
               "RelativeToolTip": "JobSearcher_Queries\\Models\\Job.cs",
-              "ViewState": "AQIAABIAAAAAAAAAAAAkwBkAAAAZAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAjAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-20T16:36:46.09Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "CredentialsLogic.cs",
-              "DocumentMoniker": "C:\\Repos\\Rewe_test\\Rewe_Credentials\\BusinessLogic\\CredentialsLogic.cs",
-              "RelativeDocumentMoniker": "Rewe_Credentials\\BusinessLogic\\CredentialsLogic.cs",
-              "ToolTip": "C:\\Repos\\Rewe_test\\Rewe_Credentials\\BusinessLogic\\CredentialsLogic.cs",
-              "RelativeToolTip": "Rewe_Credentials\\BusinessLogic\\CredentialsLogic.cs",
-              "ViewState": "AQIAAJcAAAAAAAAAAAAlwKUAAAA6AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-21T14:20:06.051Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 17,
               "Title": "DocumentResponse.cs",
               "DocumentMoniker": "C:\\Repos\\Rewe_test\\JobSearcher_Queries\\Models\\DocumentResponse.cs",
               "RelativeDocumentMoniker": "JobSearcher_Queries\\Models\\DocumentResponse.cs",
@@ -332,7 +383,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 19,
               "Title": "SearchResponse.cs",
               "DocumentMoniker": "C:\\Repos\\Rewe_test\\JobSearcher_Queries\\Models\\SearchResponse.cs",
               "RelativeDocumentMoniker": "JobSearcher_Queries\\Models\\SearchResponse.cs",
@@ -345,7 +396,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 20,
               "Title": "JobApplicationResult.cs",
               "DocumentMoniker": "C:\\Repos\\Rewe_test\\JobSearcher_Queries\\Models\\JobApplicationResult.cs",
               "RelativeDocumentMoniker": "JobSearcher_Queries\\Models\\JobApplicationResult.cs",
@@ -358,20 +409,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 11,
               "Title": "ApplicantDocumentRequest.cs",
               "DocumentMoniker": "C:\\Repos\\Rewe_test\\JobSearcher_Queries\\Models\\ApplicantDocumentRequest.cs",
               "RelativeDocumentMoniker": "JobSearcher_Queries\\Models\\ApplicantDocumentRequest.cs",
               "ToolTip": "C:\\Repos\\Rewe_test\\JobSearcher_Queries\\Models\\ApplicantDocumentRequest.cs",
               "RelativeToolTip": "JobSearcher_Queries\\Models\\ApplicantDocumentRequest.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAyAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAApAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-24T17:48:29.321Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 21,
               "Title": "Credential.cs",
               "DocumentMoniker": "C:\\Repos\\Rewe_test\\JobSearcher_Queries\\Models\\Credential.cs",
               "RelativeDocumentMoniker": "JobSearcher_Queries\\Models\\Credential.cs",
@@ -384,7 +435,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 22,
               "Title": "SearchRequest.cs",
               "DocumentMoniker": "C:\\Repos\\Rewe_test\\JobSearcher_Queries\\Models\\SearchRequest.cs",
               "RelativeDocumentMoniker": "JobSearcher_Queries\\Models\\SearchRequest.cs",
@@ -397,7 +448,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 25,
               "Title": "Relevancy.cs",
               "DocumentMoniker": "C:\\Repos\\Rewe_test\\JobSearcher_Queries\\Models\\Relevancy.cs",
               "RelativeDocumentMoniker": "JobSearcher_Queries\\Models\\Relevancy.cs",
@@ -405,11 +456,12 @@
               "RelativeToolTip": "JobSearcher_Queries\\Models\\Relevancy.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-20T16:01:40.937Z"
+              "WhenOpened": "2024-05-20T16:01:40.937Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 23,
               "Title": "Filter.cs",
               "DocumentMoniker": "C:\\Repos\\Rewe_test\\JobSearcher_Queries\\Models\\Filter.cs",
               "RelativeDocumentMoniker": "JobSearcher_Queries\\Models\\Filter.cs",
@@ -417,11 +469,12 @@
               "RelativeToolTip": "JobSearcher_Queries\\Models\\Filter.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAA6AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-22T14:23:48.743Z"
+              "WhenOpened": "2024-05-22T14:23:48.743Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 24,
               "Title": "SearchFilter.cs",
               "DocumentMoniker": "C:\\Repos\\Rewe_test\\JobSearcher_Queries\\Models\\SearchFilter.cs",
               "RelativeDocumentMoniker": "JobSearcher_Queries\\Models\\SearchFilter.cs",
@@ -429,11 +482,12 @@
               "RelativeToolTip": "JobSearcher_Queries\\Models\\SearchFilter.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAYwAUAAABGAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-20T15:59:22.138Z"
+              "WhenOpened": "2024-05-20T15:59:22.138Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 26,
               "Title": "Gender.cs",
               "DocumentMoniker": "C:\\Repos\\Rewe_test\\JobSearcher_Queries\\Models\\Gender.cs",
               "RelativeDocumentMoniker": "JobSearcher_Queries\\Models\\Gender.cs",
@@ -441,11 +495,12 @@
               "RelativeToolTip": "JobSearcher_Queries\\Models\\Gender.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-20T15:01:51.678Z"
+              "WhenOpened": "2024-05-20T15:01:51.678Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 27,
               "Title": "SearchForJobs.cs",
               "DocumentMoniker": "C:\\Repos\\Rewe_test\\Rewe_Credentials\\BusinessLogic\\SearchForJobs.cs",
               "RelativeDocumentMoniker": "Rewe_Credentials\\BusinessLogic\\SearchForJobs.cs",
@@ -453,11 +508,12 @@
               "RelativeToolTip": "Rewe_Credentials\\BusinessLogic\\SearchForJobs.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-21T06:54:50.902Z"
+              "WhenOpened": "2024-05-21T06:54:50.902Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 28,
               "Title": "JobGroups.cs",
               "DocumentMoniker": "C:\\Repos\\Rewe_test\\JobSearcher_Queries\\Models\\JobGroups.cs",
               "RelativeDocumentMoniker": "JobSearcher_Queries\\Models\\JobGroups.cs",
@@ -465,23 +521,25 @@
               "RelativeToolTip": "JobSearcher_Queries\\Models\\JobGroups.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAArAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-20T16:38:24.249Z"
+              "WhenOpened": "2024-05-20T16:38:24.249Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "JobDescription.cs",
-              "DocumentMoniker": "C:\\Repos\\Rewe_test\\JobSearcher_Queries\\Models\\JobDescription.cs",
-              "RelativeDocumentMoniker": "JobSearcher_Queries\\Models\\JobDescription.cs",
-              "ToolTip": "C:\\Repos\\Rewe_test\\JobSearcher_Queries\\Models\\JobDescription.cs",
-              "RelativeToolTip": "JobSearcher_Queries\\Models\\JobDescription.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAmAAAA",
+              "DocumentIndex": 7,
+              "Title": "JobDescriptionResponse.cs",
+              "DocumentMoniker": "C:\\Repos\\Rewe_test\\JobSearcher_Queries\\Models\\JobDescriptionResponse.cs",
+              "RelativeDocumentMoniker": "JobSearcher_Queries\\Models\\JobDescriptionResponse.cs",
+              "ToolTip": "C:\\Repos\\Rewe_test\\JobSearcher_Queries\\Models\\JobDescriptionResponse.cs",
+              "RelativeToolTip": "JobSearcher_Queries\\Models\\JobDescriptionResponse.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAQAAAAmAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-20T15:41:46.905Z"
+              "WhenOpened": "2024-05-20T15:41:46.905Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 29,
               "Title": "SortDirection.cs",
               "DocumentMoniker": "C:\\Repos\\Rewe_test\\JobSearcher_Queries\\Models\\SortDirection.cs",
               "RelativeDocumentMoniker": "JobSearcher_Queries\\Models\\SortDirection.cs",
@@ -489,7 +547,8 @@
               "RelativeToolTip": "JobSearcher_Queries\\Models\\SortDirection.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-20T16:04:25.118Z"
+              "WhenOpened": "2024-05-20T16:04:25.118Z",
+              "EditorCaption": ""
             }
           ]
         }

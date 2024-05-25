@@ -12,5 +12,7 @@ namespace Rewe_JobSearcher.Interfaces
         public void ShowJobs(SearchResponse response);
         void ShowSubmitResponse(SubmitResponse response);
         void ShowDocumentsResponse(DocumentResponse documentsResponse);
+        void ShowDocumentsResponse(JobDescriptionResponse jobDescriptionResponse);
+        void ShowJobWithDetailedDescriptionResponseResponse(JobWithDetailedDescriptionResponse jobWithDetailedDescriptionResponse);
     }
 }

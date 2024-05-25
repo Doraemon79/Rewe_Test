@@ -1,6 +1,6 @@
 ﻿namespace JobSearcher_Queries.Models
 {
-    public class JobDescription
+    public class JobDescriptionResponse
     {
         public string jobDescriptionId { get; set; }
         public string accountingCompany { get; set; }
