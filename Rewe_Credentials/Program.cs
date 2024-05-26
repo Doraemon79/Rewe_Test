@@ -6,6 +6,8 @@ using Microsoft.Extensions.Hosting;
 using Rewe_JobSearcher.BusinessLogic;
 using Rewe_JobSearcher.Interfaces;
 using Serilog;
+using System.Text.Json;
+using System.Text.Json.Serialization;
 
 namespace Rewe_JobSearcher
 {
@@ -14,6 +16,13 @@ namespace Rewe_JobSearcher
         private static IServiceProvider ServiceProvider;
         static async Task Main(string[] args)
         {
+            //This is to ignore the value from models when they are equal to null
+            //I have to use this option because of the weird behaviour of Filter 
+            JsonSerializerOptions options = new()
+            {
+                DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull
+            };
+
             // Configure Serilog
             Log.Logger = new LoggerConfiguration()
                 .MinimumLevel.Debug()
@@ -30,7 +39,14 @@ namespace Rewe_JobSearcher
                 var apiService = host.Services.GetRequiredService<IApiService>();
                 var CredentialsLogicService = host.Services.GetRequiredService<ICredentialsLogic>();
 
-                string token = CredentialsLogicService.GetToken().Result;
+                // Your client credentials
+                //Console.WriteLine("Please write your client-Id");
+                //var clientId = Console.ReadLine();
+                string clientId = "2f7680b4-35c2-45d9-8560-3e7af1be61fa";
+                //Console.WriteLine("Please write your client-Secret");
+                //string clientSecret = Console.ReadLine();
+                string clientSecret = "1855ed7e-88d5-4d13-8ab2-b40da734befa";
+                string token = await apiService.GetToken("https://dev.auth.rewe-group.at/v1/api/auth/token", clientId, clientSecret);
                 Credential credential = new Credential();
                 await apiService.PostCredentials(token, credential);
                 bool exit = false;
@@ -52,7 +68,8 @@ namespace Rewe_JobSearcher
                     {
                         case "R":
                             Console.WriteLine("You selected to read the job ads");
-                            Filter filter = CredentialsLogicService.GetFilter();
+                            //Filter filter = CredentialsLogicService.GetFilter();
+                            Filter filter = new Filter();
                             var searchResponse = await apiService.SendAsync<Filter, SearchResponse>(HttpMethod.Post, "https://dev.apply.rewe-group.at:443/V1/api/jobs/search", filter, null, token);
                             CredentialsLogicService.ShowJobs(searchResponse);
                             break;
@@ -84,14 +101,13 @@ namespace Rewe_JobSearcher
                             Console.WriteLine("Please write the DocumentId of the document you want to delete (it is the number given when you uploaded it) :");
                             var jobDocumentId = Console.ReadLine();
                             var deleteResponse = await apiService.SendDeleteAsync<EmptyGenericRequest>("https://dev.apply.rewe-group.at:443/V1/api/job-applications/" + credential.Id + "/documents/" + jobDocumentId, null, credential.AuthCode, token);
-
                             break;
                         case "T":
                             Console.WriteLine("You selected to retrieve a job description the documents");
                             Console.WriteLine("Please write the JobDescriptionId of the document (the JobDescriptionId can be found when you read [R] the job ads ):");
                             var jobDescriptionId = Console.ReadLine();
                             var jobDescriptionResponse = await apiService.SendAsync<EmptyGenericRequest, JobDescriptionResponse>(HttpMethod.Get, "https://dev.apply.rewe-group.at:443/V1/api/jobs/" + jobDescriptionId, null, credential.AuthCode, token);
-                            CredentialsLogicService.ShowDocumentsResponse(jobDescriptionResponse);
+                            CredentialsLogicService.ShowJobDescriptionResponse(jobDescriptionResponse);
                             break;
                         case "Det":
                             Console.WriteLine("You selected to retrieve a job detailed description the documents");
@@ -100,7 +116,7 @@ namespace Rewe_JobSearcher
                             Console.WriteLine("Please write the JobId of the job Offer (the JobId can be found when you read [R] the job ads ) :");
                             var JobId = Console.ReadLine();
                             var jobWithDetailedDescriptionResponse = await apiService.SendAsync<EmptyGenericRequest, JobWithDetailedDescriptionResponse>(HttpMethod.Get, "https://dev.apply.rewe-group.at:443/V1/api/jobs/" + jobDescriptionId + "/offers/" + JobId, null, credential.AuthCode, token);
-                            CredentialsLogicService.ShowJobWithDetailedDescriptionResponseResponse(jobWithDetailedDescriptionResponse);
+                            CredentialsLogicService.ShowJobWithDetailedDescriptionResponse(jobWithDetailedDescriptionResponse);
                             break;
                         case "K":
                             Console.WriteLine("Exiting...");
@@ -111,14 +127,9 @@ namespace Rewe_JobSearcher
                             Console.WriteLine("Invalid selection, please try again.");
                             break;
                     }
-
-
-
                 } while (!exit);
                 await host.RunAsync();
             }
-
-
             catch (Exception ex)
             {
                 Log.Fatal(ex, "Application start-up failed.");
@@ -128,8 +139,6 @@ namespace Rewe_JobSearcher
                 Log.CloseAndFlush();
             }
         }
-
-
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
     Host.CreateDefaultBuilder(args)

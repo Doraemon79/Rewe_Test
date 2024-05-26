@@ -1,10 +1,7 @@
-﻿using System.Text.Json.Serialization;
-
-namespace JobSearcher_Queries.Models
+﻿namespace JobSearcher_Queries.Models
 {
     public class Applicant
     {
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         public string titleCode { get; set; } = null;
         public string firstName { get; set; } = "Iggy";
         public string lastName { get; set; } = null;

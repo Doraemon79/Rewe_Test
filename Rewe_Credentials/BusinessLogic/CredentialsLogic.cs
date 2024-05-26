@@ -1,90 +1,12 @@
 ﻿using JobSearcher_Queries.Models;
 using Rewe_JobSearcher.Interfaces;
 using System.Globalization;
-using System.Text;
 using System.Text.Json;
 
 namespace Rewe_JobSearcher.BusinessLogic
 {
     public class CredentialsLogic : ICredentialsLogic
     {
-        public async Task<string> GetToken()
-        {
-            // Your client credentials
-            //Console.WriteLine("Please write your client-Id");
-            //var clientId = Console.ReadLine();
-            string clientId = "2f7680b4-35c2-45d9-8560-3e7af1be61fa";
-            //Console.WriteLine("Please write your client-Secret");
-            //string clientSecret = Console.ReadLine();
-            string clientSecret = "1855ed7e-88d5-4d13-8ab2-b40da734befa";
-            string accessToken = null;
-
-            // Combine the credentials into a single string
-            string credentials = $"{clientId}:{clientSecret}";
-
-            // Encode the credentials in Base64
-            string encodedCredentials = Convert.ToBase64String(Encoding.UTF8.GetBytes(credentials));
-
-            // The URL of the token endpoint
-            string url = "https://dev.auth.rewe-group.at/v1/api/auth/token";
-
-            // Create an HTTP client
-            using (HttpClient client = new HttpClient())
-            {
-                // Set the Authorization header with the encoded credentials
-                client.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Basic", encodedCredentials);
-
-                // The data to send in the request body
-                var requestData = new StringContent("grant_type=client_credentials", Encoding.UTF8, "application/x-www-form-urlencoded");
-
-                // Make the POST request
-                HttpResponseMessage response = await client.PostAsync(url, requestData);
-
-                // Read the response
-                string responseContent = await response.Content.ReadAsStringAsync();
-                Console.WriteLine(responseContent);
-                Console.ReadLine();
-                accessToken = ExtractAccessToken(responseContent);
-
-            }
-            return accessToken;
-        }
-
-
-        public Filter GetFilter()
-        {
-            //this filler has been made in a simplified form for testing purposes
-            Filter filter = new Filter();
-            //filter.accountingCompanyId = "";
-            //filter.AccountingCompanyIds = new List<string> { ""};
-            //filter.JobGroupIds = new List<int> { 0 };
-            //filter.SubJobGroupIds = new List<int> { 0 };
-            //filter.JobTypeIds = new List<int> { 0 };
-            //filter.ProvinceIdList = new List<string> { "" };
-            //filter.DistrictIdList = new List<string> { "" };
-            //filter.employmentLevelId = "V";
-            //filter.searchTerm = "";
-            //filter.JobLevels = new List<string> { "" };
-            //filter.jobDescriptionId = "";
-            //filter.CityList = new List<string> { "" };
-            filter.zip = "1200";
-            //filter.minWorkingHours = 0;
-            //filter.maxWorkingHours = 0;
-            //filter.offset = 0;
-            //filter.limit = 0;
-            //filter.sortField = "Relevancy";
-            //filter.sortDirection = "Ascending";
-            //filter.includeInternal = true;
-
-            return filter;
-        }
-
-        public string ConvertToBase64(string path)
-        {
-            Byte[] bytes = File.ReadAllBytes(path);
-            return Convert.ToBase64String(bytes);
-        }
-
         public ApplicantDocument DocumentFiller()
         {
             ApplicantDocument document = new ApplicantDocument();
@@ -152,7 +74,7 @@ namespace Rewe_JobSearcher.BusinessLogic
         }
         public void ShowSubmitResponse(SubmitResponse response)
         {
-            if (response.id != 0)
+            if (response != null)
             {
                 Console.WriteLine("You submitted succesfuly for the job with Id:" + response.id);
                 Console.WriteLine("for this job we received the following documents:");
@@ -165,14 +87,14 @@ namespace Rewe_JobSearcher.BusinessLogic
 
         public void ShowDocumentsResponse(DocumentResponse documentsResponse)
         {
-            if (!string.IsNullOrEmpty(documentsResponse.DocumentName))
+            if (!string.IsNullOrEmpty(documentsResponse.documentName))
             {
-                Console.WriteLine($"Document of type {documentsResponse.DocumentType} with name {documentsResponse.DocumentName} and Id: {documentsResponse.DocumentId} has been  uploaded");
+                Console.WriteLine($"Document of type {documentsResponse.documentType} with name {documentsResponse.documentName} and Id: {documentsResponse.documentId} has been  uploaded");
             }
         }
 
         //helper to show a reduced  description of the job
-        public void ShowDocumentsResponse(JobDescriptionResponse jobDescriptionResponse)
+        public void ShowJobDescriptionResponse(JobDescriptionResponse jobDescriptionResponse)
         {
             if (!string.IsNullOrEmpty(jobDescriptionResponse.jobDescriptionId))
             {
@@ -182,11 +104,11 @@ namespace Rewe_JobSearcher.BusinessLogic
         }
 
         //Helper to show a reduced detailed description of the job
-        public void ShowJobWithDetailedDescriptionResponseResponse(JobWithDetailedDescriptionResponse jobWithDetailedDescriptionResponse)
+        public void ShowJobWithDetailedDescriptionResponse(JobWithDetailedDescriptionResponse jobWithDetailedDescriptionResponse)
         {
             if (!string.IsNullOrEmpty(jobWithDetailedDescriptionResponse.job.jobDescriptionId))
             {
-                ShowDocumentsResponse(jobWithDetailedDescriptionResponse.description);
+                ShowJobDescriptionResponse(jobWithDetailedDescriptionResponse.description);
                 Console.WriteLine($"Job accountingCompany is: {jobWithDetailedDescriptionResponse.job.accountingCompany}");
             }
         }
@@ -199,6 +121,11 @@ namespace Rewe_JobSearcher.BusinessLogic
                 JsonElement root = doc.RootElement;
                 return root.GetProperty("access_token").GetString();
             }
+        }
+        private string ConvertToBase64(string path)
+        {
+            Byte[] bytes = File.ReadAllBytes(path);
+            return Convert.ToBase64String(bytes);
         }
     }
 }

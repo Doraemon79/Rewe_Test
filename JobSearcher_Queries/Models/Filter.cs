@@ -16,8 +16,8 @@
         public string jobDescriptionId { get; set; } = null;
         public List<string> cityList { get; set; } = null;
         public string zip { get; set; } = null;
-        //public int minWorkingHours { get; set; } = null;
-        //public int maxWorkingHours { get; set; } = null;
+        //public double minWorkingHours { get; set; } = 0.0;
+        //public double maxWorkingHours { get; set; } = 0.0;
         //public int offset { get; set; } = 0;
         //public int limit { get; set; } = 0;
         public string sortField { get; set; } = null;

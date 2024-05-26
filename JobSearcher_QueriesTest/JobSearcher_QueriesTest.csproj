@@ -19,6 +19,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\JobSearcher_Queries\JobSearcher_Queries.csproj" />
+    <ProjectReference Include="..\Rewe_Credentials\Rewe_JobSearcher.csproj" />
   </ItemGroup>
 
   <ItemGroup>

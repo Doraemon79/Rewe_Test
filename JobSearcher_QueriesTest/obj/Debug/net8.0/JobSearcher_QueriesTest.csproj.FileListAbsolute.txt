@@ -157,3 +157,8 @@ C:\Repos\Rewe_test\JobSearcher_QueriesTest\obj\Debug\net8.0\JobSearcher_QueriesT
 C:\Repos\Rewe_test\JobSearcher_QueriesTest\obj\Debug\net8.0\ref\JobSearcher_QueriesTest.dll
 C:\Repos\Rewe_test\JobSearcher_QueriesTest\bin\Debug\net8.0\Castle.Core.dll
 C:\Repos\Rewe_test\JobSearcher_QueriesTest\bin\Debug\net8.0\Moq.dll
+C:\Repos\Rewe_test\JobSearcher_QueriesTest\bin\Debug\net8.0\Rewe_JobSearcher.deps.json
+C:\Repos\Rewe_test\JobSearcher_QueriesTest\bin\Debug\net8.0\Rewe_JobSearcher.runtimeconfig.json
+C:\Repos\Rewe_test\JobSearcher_QueriesTest\bin\Debug\net8.0\Rewe_JobSearcher.exe
+C:\Repos\Rewe_test\JobSearcher_QueriesTest\bin\Debug\net8.0\Rewe_JobSearcher.dll
+C:\Repos\Rewe_test\JobSearcher_QueriesTest\bin\Debug\net8.0\Rewe_JobSearcher.pdb
