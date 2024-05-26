@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "cZKrlUATQ/cAQOqvo5F/PatdKQ7wbgUc1kdsMsjwErVS99WxrtbtJGd7Kco/VFoCBhtZVQq1MFiFfC2DNDAX9g==",
+  "dgSpecHash": "/9r4Jpbr9evJdA/aVfV34XYbxz7bA/7FBDdSSTTAJrDizChIyoB5ix7yZIz4TGJxFhRHSbvdmBu6IVl7vf955A==",
   "success": true,
   "projectFilePath": "C:\\Repos\\Rewe_test\\Rewe_Credentials\\Rewe_JobSearcher.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\ignle\\.nuget\\packages\\agecalculator\\1.4.1\\agecalculator.1.4.1.nupkg.sha512",
     "C:\\Users\\ignle\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.1.1\\microsoft.aspnetcore.authentication.abstractions.2.1.1.nupkg.sha512",
     "C:\\Users\\ignle\\.nuget\\packages\\microsoft.aspnetcore.authentication.core\\2.1.1\\microsoft.aspnetcore.authentication.core.2.1.1.nupkg.sha512",
     "C:\\Users\\ignle\\.nuget\\packages\\microsoft.aspnetcore.authorization\\2.1.1\\microsoft.aspnetcore.authorization.2.1.1.nupkg.sha512",

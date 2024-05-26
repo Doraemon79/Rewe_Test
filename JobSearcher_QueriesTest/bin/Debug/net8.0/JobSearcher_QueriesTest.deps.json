@@ -20,6 +20,14 @@
           "JobSearcher_QueriesTest.dll": {}
         }
       },
+      "AgeCalculator/1.4.1": {
+        "runtime": {
+          "lib/net8.0/AgeCalculator.dll": {
+            "assemblyVersion": "1.4.1.0",
+            "fileVersion": "1.4.1.0"
+          }
+        }
+      },
       "Castle.Core/5.1.1": {
         "dependencies": {
           "System.Diagnostics.EventLog": "8.0.0"
@@ -1337,6 +1345,7 @@
       },
       "Rewe_JobSearcher/1.0.0": {
         "dependencies": {
+          "AgeCalculator": "1.4.1",
           "JobSearcher_Queries": "1.0.0",
           "Microsoft.Extensions.DependencyInjection": "8.0.0",
           "Microsoft.Extensions.Hosting": "8.0.0",
@@ -1356,6 +1365,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "AgeCalculator/1.4.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-AoQPM6hGdAZz7BemTCkxt9h/a6jkPS5MpcMOEf6Z8RXWAAy7KBfb0Dw1KB4q+IzEBz2vrsc5XHJuFS4kD3T9dA==",
+      "path": "agecalculator/1.4.1",
+      "hashPath": "agecalculator.1.4.1.nupkg.sha512"
     },
     "Castle.Core/5.1.1": {
       "type": "package",

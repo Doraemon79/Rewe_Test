@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
-<coverage line-rate="0.594011976047904" branch-rate="0.231481481481481" lines-covered="496" lines-valid="835" branches-covered="25" branches-valid="108" complexity="315" version="0" timestamp="1716746977">
+<coverage line-rate="0.631847133757962" branch-rate="0.231481481481481" lines-covered="496" lines-valid="785" branches-covered="25" branches-valid="108" complexity="279" version="0" timestamp="1716756487">
   <sources>
     <source>C:\</source>
   </sources>
   <packages>
-    <package name="JobSearcher_Queries" line-rate="0.461538461538462" branch-rate="0.464285714285714" complexity="209">
+    <package name="JobSearcher_Queries" line-rate="0.511111111111111" branch-rate="0.464285714285714" complexity="180">
       <classes>
         <class name="JobSearcher_Queries.ApiService" filename="C:\Repos\Rewe_test\JobSearcher_Queries\ApiService.cs" line-rate="0.669421487603306" branch-rate="0.464285714285714" complexity="31">
           <methods>
@@ -409,90 +409,6 @@
             <line number="11" hits="2" branch="false" />
           </lines>
         </class>
-        <class name="JobSearcher_Queries.Models.ApplicantDocumentRequest" filename="C:\Repos\Rewe_test\JobSearcher_Queries\Models\ApplicantDocumentRequest.cs" line-rate="0" branch-rate="1" complexity="4">
-          <methods>
-            <method name="get_AuthCode" signature="()" line-rate="0" branch-rate="1" complexity="1">
-              <lines>
-                <line number="7" hits="0" branch="false" />
-              </lines>
-            </method>
-            <method name="get_documentType" signature="()" line-rate="0" branch-rate="1" complexity="1">
-              <lines>
-                <line number="10" hits="0" branch="false" />
-              </lines>
-            </method>
-            <method name="get_documentName" signature="()" line-rate="0" branch-rate="1" complexity="1">
-              <lines>
-                <line number="11" hits="0" branch="false" />
-              </lines>
-            </method>
-            <method name="get_documentBlob" signature="()" line-rate="0" branch-rate="1" complexity="1">
-              <lines>
-                <line number="12" hits="0" branch="false" />
-              </lines>
-            </method>
-          </methods>
-          <lines>
-            <line number="7" hits="0" branch="false" />
-            <line number="10" hits="0" branch="false" />
-            <line number="11" hits="0" branch="false" />
-            <line number="12" hits="0" branch="false" />
-          </lines>
-        </class>
-        <class name="JobSearcher_Queries.Models.applicationDetails" filename="C:\Repos\Rewe_test\JobSearcher_Queries\Models\applicationDetails.cs" line-rate="0" branch-rate="1" complexity="8">
-          <methods>
-            <method name="get_jobId" signature="()" line-rate="0" branch-rate="1" complexity="1">
-              <lines>
-                <line number="5" hits="0" branch="false" />
-              </lines>
-            </method>
-            <method name="get_storeIdList" signature="()" line-rate="0" branch-rate="1" complexity="1">
-              <lines>
-                <line number="6" hits="0" branch="false" />
-              </lines>
-            </method>
-            <method name="get_desiredSalary" signature="()" line-rate="0" branch-rate="1" complexity="1">
-              <lines>
-                <line number="7" hits="0" branch="false" />
-              </lines>
-            </method>
-            <method name="get_recommendedBy" signature="()" line-rate="0" branch-rate="1" complexity="1">
-              <lines>
-                <line number="8" hits="0" branch="false" />
-              </lines>
-            </method>
-            <method name="get_availableFrom" signature="()" line-rate="0" branch-rate="1" complexity="1">
-              <lines>
-                <line number="9" hits="0" branch="false" />
-              </lines>
-            </method>
-            <method name="get_agreedToDataProcessing" signature="()" line-rate="0" branch-rate="1" complexity="1">
-              <lines>
-                <line number="10" hits="0" branch="false" />
-              </lines>
-            </method>
-            <method name="get_agreedToDataRelaying" signature="()" line-rate="0" branch-rate="1" complexity="1">
-              <lines>
-                <line number="11" hits="0" branch="false" />
-              </lines>
-            </method>
-            <method name="get_externalSource" signature="()" line-rate="0" branch-rate="1" complexity="1">
-              <lines>
-                <line number="12" hits="0" branch="false" />
-              </lines>
-            </method>
-          </methods>
-          <lines>
-            <line number="5" hits="0" branch="false" />
-            <line number="6" hits="0" branch="false" />
-            <line number="7" hits="0" branch="false" />
-            <line number="8" hits="0" branch="false" />
-            <line number="9" hits="0" branch="false" />
-            <line number="10" hits="0" branch="false" />
-            <line number="11" hits="0" branch="false" />
-            <line number="12" hits="0" branch="false" />
-          </lines>
-        </class>
         <class name="JobSearcher_Queries.Models.Company" filename="C:\Repos\Rewe_test\JobSearcher_Queries\Models\Company.cs" line-rate="0" branch-rate="1" complexity="2">
           <methods>
             <method name="get_id" signature="()" line-rate="0" branch-rate="1" complexity="1">
@@ -573,14 +489,14 @@
             </method>
             <method name="get_documentName" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="8" hits="4" branch="false" />
+                <line number="7" hits="4" branch="false" />
               </lines>
             </method>
           </methods>
           <lines>
             <line number="5" hits="2" branch="false" />
             <line number="6" hits="4" branch="false" />
-            <line number="8" hits="4" branch="false" />
+            <line number="7" hits="4" branch="false" />
           </lines>
         </class>
         <class name="JobSearcher_Queries.Models.Filter" filename="C:\Repos\Rewe_test\JobSearcher_Queries\Models\Filter.cs" line-rate="0" branch-rate="1" complexity="15">
@@ -1141,48 +1057,6 @@
             <line number="7" hits="0" branch="false" />
           </lines>
         </class>
-        <class name="JobSearcher_Queries.Models.Location" filename="C:\Repos\Rewe_test\JobSearcher_Queries\Models\Location.cs" line-rate="0" branch-rate="1" complexity="6">
-          <methods>
-            <method name="get_street" signature="()" line-rate="0" branch-rate="1" complexity="1">
-              <lines>
-                <line number="5" hits="0" branch="false" />
-              </lines>
-            </method>
-            <method name="get_town" signature="()" line-rate="0" branch-rate="1" complexity="1">
-              <lines>
-                <line number="6" hits="0" branch="false" />
-              </lines>
-            </method>
-            <method name="get_postalCode" signature="()" line-rate="0" branch-rate="1" complexity="1">
-              <lines>
-                <line number="7" hits="0" branch="false" />
-              </lines>
-            </method>
-            <method name="get_city" signature="()" line-rate="0" branch-rate="1" complexity="1">
-              <lines>
-                <line number="8" hits="0" branch="false" />
-              </lines>
-            </method>
-            <method name="get_state" signature="()" line-rate="0" branch-rate="1" complexity="1">
-              <lines>
-                <line number="9" hits="0" branch="false" />
-              </lines>
-            </method>
-            <method name="get_country" signature="()" line-rate="0" branch-rate="1" complexity="1">
-              <lines>
-                <line number="10" hits="0" branch="false" />
-              </lines>
-            </method>
-          </methods>
-          <lines>
-            <line number="5" hits="0" branch="false" />
-            <line number="6" hits="0" branch="false" />
-            <line number="7" hits="0" branch="false" />
-            <line number="8" hits="0" branch="false" />
-            <line number="9" hits="0" branch="false" />
-            <line number="10" hits="0" branch="false" />
-          </lines>
-        </class>
         <class name="JobSearcher_Queries.Models.SearchFilter" filename="C:\Repos\Rewe_test\JobSearcher_Queries\Models\SearchFilter.cs" line-rate="0" branch-rate="1" complexity="13">
           <methods>
             <method name="get_accountingCompanyId" signature="()" line-rate="0" branch-rate="1" complexity="1">
@@ -1267,24 +1141,6 @@
             <line number="17" hits="0" branch="false" />
           </lines>
         </class>
-        <class name="JobSearcher_Queries.Models.SearchRequest" filename="C:\Repos\Rewe_test\JobSearcher_Queries\Models\SearchRequest.cs" line-rate="0" branch-rate="1" complexity="2">
-          <methods>
-            <method name="get_token" signature="()" line-rate="0" branch-rate="1" complexity="1">
-              <lines>
-                <line number="5" hits="0" branch="false" />
-              </lines>
-            </method>
-            <method name="get_filter" signature="()" line-rate="0" branch-rate="1" complexity="1">
-              <lines>
-                <line number="6" hits="0" branch="false" />
-              </lines>
-            </method>
-          </methods>
-          <lines>
-            <line number="5" hits="0" branch="false" />
-            <line number="6" hits="0" branch="false" />
-          </lines>
-        </class>
         <class name="JobSearcher_Queries.Models.SearchResponse" filename="C:\Repos\Rewe_test\JobSearcher_Queries\Models\SearchResponse.cs" line-rate="1" branch-rate="1" complexity="3">
           <methods>
             <method name="get_numberOfHits" signature="()" line-rate="1" branch-rate="1" complexity="1">
@@ -1331,66 +1187,6 @@
             <line number="5" hits="0" branch="false" />
             <line number="6" hits="0" branch="false" />
             <line number="7" hits="0" branch="false" />
-          </lines>
-        </class>
-        <class name="JobSearcher_Queries.Models.SubmitDetails" filename="C:\Repos\Rewe_test\JobSearcher_Queries\Models\SubmitDetails.cs" line-rate="0" branch-rate="1" complexity="9">
-          <methods>
-            <method name="get_jobId" signature="()" line-rate="0" branch-rate="1" complexity="1">
-              <lines>
-                <line number="5" hits="0" branch="false" />
-              </lines>
-            </method>
-            <method name="get_storeIdList" signature="()" line-rate="0" branch-rate="1" complexity="1">
-              <lines>
-                <line number="6" hits="0" branch="false" />
-              </lines>
-            </method>
-            <method name="get_desiredSalary" signature="()" line-rate="0" branch-rate="1" complexity="1">
-              <lines>
-                <line number="7" hits="0" branch="false" />
-              </lines>
-            </method>
-            <method name="get_recommendedBy" signature="()" line-rate="0" branch-rate="1" complexity="1">
-              <lines>
-                <line number="8" hits="0" branch="false" />
-              </lines>
-            </method>
-            <method name="get_availableFrom" signature="()" line-rate="0" branch-rate="1" complexity="1">
-              <lines>
-                <line number="9" hits="0" branch="false" />
-              </lines>
-            </method>
-            <method name="get_agreedToDataProcessing" signature="()" line-rate="0" branch-rate="1" complexity="1">
-              <lines>
-                <line number="10" hits="0" branch="false" />
-              </lines>
-            </method>
-            <method name="get_agreedToDataRelaying" signature="()" line-rate="0" branch-rate="1" complexity="1">
-              <lines>
-                <line number="11" hits="0" branch="false" />
-              </lines>
-            </method>
-            <method name="get_externalSource" signature="()" line-rate="0" branch-rate="1" complexity="1">
-              <lines>
-                <line number="12" hits="0" branch="false" />
-              </lines>
-            </method>
-            <method name="get_externalDestination" signature="()" line-rate="0" branch-rate="1" complexity="1">
-              <lines>
-                <line number="13" hits="0" branch="false" />
-              </lines>
-            </method>
-          </methods>
-          <lines>
-            <line number="5" hits="0" branch="false" />
-            <line number="6" hits="0" branch="false" />
-            <line number="7" hits="0" branch="false" />
-            <line number="8" hits="0" branch="false" />
-            <line number="9" hits="0" branch="false" />
-            <line number="10" hits="0" branch="false" />
-            <line number="11" hits="0" branch="false" />
-            <line number="12" hits="0" branch="false" />
-            <line number="13" hits="0" branch="false" />
           </lines>
         </class>
         <class name="JobSearcher_Queries.Models.SubmitRequest" filename="C:\Repos\Rewe_test\JobSearcher_Queries\Models\SubmitRequest.cs" line-rate="0" branch-rate="1" complexity="10">
@@ -2209,7 +2005,7 @@
         </class>
       </classes>
     </package>
-    <package name="Rewe_JobSearcher" line-rate="0.201834862385321" branch-rate="0.15" complexity="91">
+    <package name="Rewe_JobSearcher" line-rate="0.223350253807107" branch-rate="0.15" complexity="84">
       <classes>
         <class name="Rewe_JobSearcher.BusinessLogic.CredentialsLogic" filename="C:\Repos\Rewe_test\Rewe_Credentials\BusinessLogic\CredentialsLogic.cs" line-rate="0.448979591836735" branch-rate="0.3" complexity="43">
           <methods>
@@ -2447,82 +2243,6 @@
             <line number="127" hits="0" branch="false" />
             <line number="128" hits="0" branch="false" />
             <line number="129" hits="0" branch="false" />
-          </lines>
-        </class>
-        <class name="Rewe_JobSearcher.BusinessLogic.SearchForJobs" filename="C:\Repos\Rewe_test\Rewe_Credentials\BusinessLogic\SearchForJobs.cs" line-rate="0" branch-rate="1" complexity="7">
-          <methods>
-            <method name="SearchForJobsById" signature="(...)" line-rate="0" branch-rate="1" complexity="1">
-              <lines>
-                <line number="6" hits="0" branch="false" />
-                <line number="7" hits="0" branch="false" />
-                <line number="8" hits="0" branch="false" />
-              </lines>
-            </method>
-            <method name="SubmitJob" signature="(...)" line-rate="0" branch-rate="1" complexity="1">
-              <lines>
-                <line number="11" hits="0" branch="false" />
-                <line number="12" hits="0" branch="false" />
-                <line number="13" hits="0" branch="false" />
-              </lines>
-            </method>
-            <method name="SearchForJobsByTitle" signature="(...)" line-rate="0" branch-rate="1" complexity="1">
-              <lines>
-                <line number="16" hits="0" branch="false" />
-                <line number="17" hits="0" branch="false" />
-                <line number="18" hits="0" branch="false" />
-              </lines>
-            </method>
-            <method name="SearchForJobsByCity" signature="(...)" line-rate="0" branch-rate="1" complexity="1">
-              <lines>
-                <line number="21" hits="0" branch="false" />
-                <line number="22" hits="0" branch="false" />
-                <line number="23" hits="0" branch="false" />
-              </lines>
-            </method>
-            <method name="SearchForJobsByEmploymentLevel" signature="(...)" line-rate="0" branch-rate="1" complexity="1">
-              <lines>
-                <line number="26" hits="0" branch="false" />
-                <line number="27" hits="0" branch="false" />
-                <line number="28" hits="0" branch="false" />
-              </lines>
-            </method>
-            <method name="SearchForJobsByAccountingCompany" signature="(...)" line-rate="0" branch-rate="1" complexity="1">
-              <lines>
-                <line number="31" hits="0" branch="false" />
-                <line number="32" hits="0" branch="false" />
-                <line number="33" hits="0" branch="false" />
-              </lines>
-            </method>
-            <method name="SearchForJobsByCreationDate" signature="(...)" line-rate="0" branch-rate="1" complexity="1">
-              <lines>
-                <line number="36" hits="0" branch="false" />
-                <line number="37" hits="0" branch="false" />
-                <line number="38" hits="0" branch="false" />
-              </lines>
-            </method>
-          </methods>
-          <lines>
-            <line number="6" hits="0" branch="false" />
-            <line number="7" hits="0" branch="false" />
-            <line number="8" hits="0" branch="false" />
-            <line number="11" hits="0" branch="false" />
-            <line number="12" hits="0" branch="false" />
-            <line number="13" hits="0" branch="false" />
-            <line number="16" hits="0" branch="false" />
-            <line number="17" hits="0" branch="false" />
-            <line number="18" hits="0" branch="false" />
-            <line number="21" hits="0" branch="false" />
-            <line number="22" hits="0" branch="false" />
-            <line number="23" hits="0" branch="false" />
-            <line number="26" hits="0" branch="false" />
-            <line number="27" hits="0" branch="false" />
-            <line number="28" hits="0" branch="false" />
-            <line number="31" hits="0" branch="false" />
-            <line number="32" hits="0" branch="false" />
-            <line number="33" hits="0" branch="false" />
-            <line number="36" hits="0" branch="false" />
-            <line number="37" hits="0" branch="false" />
-            <line number="38" hits="0" branch="false" />
           </lines>
         </class>
         <class name="Rewe_JobSearcher.Program" filename="C:\Repos\Rewe_test\Rewe_Credentials\Program.cs" line-rate="0" branch-rate="0" complexity="41">

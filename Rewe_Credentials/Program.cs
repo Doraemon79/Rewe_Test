@@ -60,7 +60,7 @@ namespace Rewe_JobSearcher
                     Console.WriteLine("- [T] To retrieve a job description ");
                     Console.WriteLine("- [Det] To retrieve a detailed job description ");
                     Console.WriteLine("- [C] To cancel one of your documents in your profile ");
-                    Console.WriteLine("- [E] To exit");
+                    Console.WriteLine("- [K] To exit");
 
                     string input = Console.ReadLine();
                     Console.WriteLine();
@@ -69,7 +69,7 @@ namespace Rewe_JobSearcher
                         case "R":
                             Console.WriteLine("You selected to read the job ads");
                             //Filter filter = CredentialsLogicService.GetFilter();
-                            Filter filter = new Filter();
+                            Filter filter = CredentialsLogicService.GetFilter();
                             var searchResponse = await apiService.SendAsync<Filter, SearchResponse>(HttpMethod.Post, "https://dev.apply.rewe-group.at:443/V1/api/jobs/search", filter, null, token);
                             CredentialsLogicService.ShowJobs(searchResponse);
                             break;
@@ -127,6 +127,7 @@ namespace Rewe_JobSearcher
                             Console.WriteLine("Invalid selection, please try again.");
                             break;
                     }
+
                 } while (!exit);
                 await host.RunAsync();
             }

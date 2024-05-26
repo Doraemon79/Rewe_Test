@@ -1,7 +1,7 @@
-﻿using JobSearcher_Queries.Models;
+﻿using AgeCalculator;
+using JobSearcher_Queries.Models;
 using Rewe_JobSearcher.Interfaces;
 using System.Globalization;
-using System.Text.Json;
 
 namespace Rewe_JobSearcher.BusinessLogic
 {
@@ -37,9 +37,39 @@ namespace Rewe_JobSearcher.BusinessLogic
             return document;
         }
 
+        public Filter GetFilter()
+        {
+            Filter filter = new Filter();
+            var cities = GetCityList();
+            filter.cityList = cities;
+            Console.WriteLine("Please write your favourite zip:");
+            filter.zip = Console.ReadLine();
+            return filter;
+        }
+
+        private List<string> GetCityList()
+        {
+            bool end = false;
+            List<string> cityList = new List<string>();
+            do
+            {
+                Console.WriteLine("Please write your desired cities:");
+                var city = Console.ReadLine();
+                if (city != null && city != string.Empty)
+                {
+                    cityList.Add(city);
+                    Console.WriteLine("Would you like to add another city [Y] or [N]");
+                    var input = Console.ReadLine().ToLower();
+                    end = !input.Equals("n");
+                }
+            } while (end);
+
+            return cityList;
+        }
+
         public Applicant ApplicantFiller()
         {
-            var cultureInfo = new CultureInfo("de-DE");
+
             Applicant applicant = new Applicant();
             Console.WriteLine();
             Console.WriteLine("Please write your family name ");
@@ -51,9 +81,7 @@ namespace Rewe_JobSearcher.BusinessLogic
             Console.WriteLine("Please write your country code  code (3 letters Ex: +39, +43 ... Default is +43) ");
             applicant.nationality = Console.ReadLine();
             Console.WriteLine();
-            Console.WriteLine("Please write your bith date ");
-            string date = Console.ReadLine();
-            applicant.birthDate = DateTime.Parse(date, cultureInfo);
+            applicant.birthDate = DateChecker();
             return applicant;
         }
 
@@ -113,14 +141,28 @@ namespace Rewe_JobSearcher.BusinessLogic
             }
         }
 
-        private string ExtractAccessToken(string jsonResponse)
+        private DateTime DateChecker()
         {
-            // Parse the JSON response and extract the access_token
-            using (JsonDocument doc = JsonDocument.Parse(jsonResponse))
+            bool adult = false;
+            DateTime birthDate;
+            do
             {
-                JsonElement root = doc.RootElement;
-                return root.GetProperty("access_token").GetString();
-            }
+                Console.WriteLine("Please write your bith date ");
+                string date = Console.ReadLine();
+                var cultureInfo = new CultureInfo("de-DE");
+                birthDate = DateTime.Parse(date, cultureInfo);
+                var age = new Age(birthDate, DateTime.Today);
+                if (age.Years < 18)
+                {
+                    Console.WriteLine("You are old enough to apply for a job");
+                    //throw new FormatException("You are not old enough to apply for a job");
+                }
+                else
+                {
+                    adult = true;
+                }
+            } while (!adult);
+            return birthDate;
         }
         private string ConvertToBase64(string path)
         {

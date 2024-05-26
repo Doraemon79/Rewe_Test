@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "1AheXHu3Mo/k/jtWpnpgOvenAgEBDyaMJOtpZGvTr/fJaEKNypZ+fF5pZYbuVsNIZUiv9Apa6Kxq1p+/WK1rOg==",
+  "dgSpecHash": "doTQB8kcBDIoB8Bs0b0Vg6gh5zEggPfvxAL71QZNgK1Ufe2IxwY8OZ6qvOkFQp35qT6Nf+Tl9K4q+7aZvmSBBg==",
   "success": true,
   "projectFilePath": "C:\\Repos\\Rewe_test\\JobSearcher_QueriesTest\\JobSearcher_QueriesTest.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\ignle\\.nuget\\packages\\agecalculator\\1.4.1\\agecalculator.1.4.1.nupkg.sha512",
     "C:\\Users\\ignle\\.nuget\\packages\\castle.core\\5.1.1\\castle.core.5.1.1.nupkg.sha512",
     "C:\\Users\\ignle\\.nuget\\packages\\coverlet.collector\\6.0.0\\coverlet.collector.6.0.0.nupkg.sha512",
     "C:\\Users\\ignle\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.1.1\\microsoft.aspnetcore.authentication.abstractions.2.1.1.nupkg.sha512",

@@ -2,6 +2,19 @@
   "version": 3,
   "targets": {
     "net8.0": {
+      "AgeCalculator/1.4.1": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/AgeCalculator.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/AgeCalculator.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.AspNetCore.Authentication.Abstractions/2.1.1": {
         "type": "package",
         "dependencies": {
@@ -1779,6 +1792,20 @@
     }
   },
   "libraries": {
+    "AgeCalculator/1.4.1": {
+      "sha512": "AoQPM6hGdAZz7BemTCkxt9h/a6jkPS5MpcMOEf6Z8RXWAAy7KBfb0Dw1KB4q+IzEBz2vrsc5XHJuFS4kD3T9dA==",
+      "type": "package",
+      "path": "agecalculator/1.4.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "agecalculator.1.4.1.nupkg.sha512",
+        "agecalculator.nuspec",
+        "lib/net8.0/AgeCalculator.dll",
+        "lib/net8.0/AgeCalculator.xml"
+      ]
+    },
     "Microsoft.AspNetCore.Authentication.Abstractions/2.1.1": {
       "sha512": "Smj5TGeE9629+hGHPk/DZUfCMYGvQwCajAsU/OVExRb8JXfeua4uXZFzT9Kh3pJY2MThPSt1lbDnkL2KaDyw/A==",
       "type": "package",
@@ -5504,6 +5531,7 @@
   },
   "projectFileDependencyGroups": {
     "net8.0": [
+      "AgeCalculator >= 1.4.1",
       "JobSearcher_Queries >= 1.0.0",
       "Microsoft.Extensions.DependencyInjection >= 8.0.0",
       "Microsoft.Extensions.Hosting >= 8.0.0",
@@ -5567,6 +5595,10 @@
       "net8.0": {
         "targetAlias": "net8.0",
         "dependencies": {
+          "AgeCalculator": {
+            "target": "Package",
+            "version": "[1.4.1, )"
+          },
           "Microsoft.Extensions.DependencyInjection": {
             "target": "Package",
             "version": "[8.0.0, )"

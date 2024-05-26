@@ -5,6 +5,7 @@ namespace Rewe_JobSearcher.Interfaces
     public interface ICredentialsLogic
     {
         public ApplicantDocument DocumentFiller();
+        public Filter GetFilter();
         public Applicant ApplicantFiller();
         public void ShowJobs(SearchResponse response);
         void ShowSubmitResponse(SubmitResponse response);
