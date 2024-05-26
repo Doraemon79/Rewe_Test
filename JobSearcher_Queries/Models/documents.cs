@@ -4,7 +4,6 @@
     {
         public int documentId { get; set; }
         public string documentType { get; set; }
-
         public string documentName { get; set; }
     }
 }

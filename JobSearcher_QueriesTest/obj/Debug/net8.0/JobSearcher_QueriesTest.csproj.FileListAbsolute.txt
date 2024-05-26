@@ -1,5 +1,8 @@
 C:\Repos\Rewe_test\JobSearcher_QueriesTest\bin\Debug\net8.0\CoverletSourceRootsMapping_JobSearcher_QueriesTest
 C:\Repos\Rewe_test\JobSearcher_QueriesTest\bin\Debug\net8.0\testhost.dll
+C:\Repos\Rewe_test\JobSearcher_QueriesTest\bin\Debug\net8.0\Rewe_JobSearcher.deps.json
+C:\Repos\Rewe_test\JobSearcher_QueriesTest\bin\Debug\net8.0\Rewe_JobSearcher.runtimeconfig.json
+C:\Repos\Rewe_test\JobSearcher_QueriesTest\bin\Debug\net8.0\Rewe_JobSearcher.exe
 C:\Repos\Rewe_test\JobSearcher_QueriesTest\bin\Debug\net8.0\testhost.exe
 C:\Repos\Rewe_test\JobSearcher_QueriesTest\bin\Debug\net8.0\xunit.runner.visualstudio.dotnetcore.testadapter.dll
 C:\Repos\Rewe_test\JobSearcher_QueriesTest\bin\Debug\net8.0\xunit.runner.reporters.netcoreapp10.dll
@@ -8,6 +11,7 @@ C:\Repos\Rewe_test\JobSearcher_QueriesTest\bin\Debug\net8.0\JobSearcher_QueriesT
 C:\Repos\Rewe_test\JobSearcher_QueriesTest\bin\Debug\net8.0\JobSearcher_QueriesTest.runtimeconfig.json
 C:\Repos\Rewe_test\JobSearcher_QueriesTest\bin\Debug\net8.0\JobSearcher_QueriesTest.dll
 C:\Repos\Rewe_test\JobSearcher_QueriesTest\bin\Debug\net8.0\JobSearcher_QueriesTest.pdb
+C:\Repos\Rewe_test\JobSearcher_QueriesTest\bin\Debug\net8.0\Castle.Core.dll
 C:\Repos\Rewe_test\JobSearcher_QueriesTest\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.Abstractions.dll
 C:\Repos\Rewe_test\JobSearcher_QueriesTest\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.Core.dll
 C:\Repos\Rewe_test\JobSearcher_QueriesTest\bin\Debug\net8.0\Microsoft.AspNetCore.Authorization.dll
@@ -64,6 +68,7 @@ C:\Repos\Rewe_test\JobSearcher_QueriesTest\bin\Debug\net8.0\Microsoft.TestPlatfo
 C:\Repos\Rewe_test\JobSearcher_QueriesTest\bin\Debug\net8.0\Microsoft.TestPlatform.CrossPlatEngine.dll
 C:\Repos\Rewe_test\JobSearcher_QueriesTest\bin\Debug\net8.0\Microsoft.TestPlatform.Utilities.dll
 C:\Repos\Rewe_test\JobSearcher_QueriesTest\bin\Debug\net8.0\Microsoft.VisualStudio.TestPlatform.Common.dll
+C:\Repos\Rewe_test\JobSearcher_QueriesTest\bin\Debug\net8.0\Moq.dll
 C:\Repos\Rewe_test\JobSearcher_QueriesTest\bin\Debug\net8.0\Newtonsoft.Json.dll
 C:\Repos\Rewe_test\JobSearcher_QueriesTest\bin\Debug\net8.0\NuGet.Frameworks.dll
 C:\Repos\Rewe_test\JobSearcher_QueriesTest\bin\Debug\net8.0\Serilog.dll
@@ -142,7 +147,9 @@ C:\Repos\Rewe_test\JobSearcher_QueriesTest\bin\Debug\net8.0\zh-Hant\Microsoft.Vi
 C:\Repos\Rewe_test\JobSearcher_QueriesTest\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Diagnostics.EventLog.Messages.dll
 C:\Repos\Rewe_test\JobSearcher_QueriesTest\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Diagnostics.EventLog.dll
 C:\Repos\Rewe_test\JobSearcher_QueriesTest\bin\Debug\net8.0\JobSearcher_Queries.dll
+C:\Repos\Rewe_test\JobSearcher_QueriesTest\bin\Debug\net8.0\Rewe_JobSearcher.dll
 C:\Repos\Rewe_test\JobSearcher_QueriesTest\bin\Debug\net8.0\JobSearcher_Queries.pdb
+C:\Repos\Rewe_test\JobSearcher_QueriesTest\bin\Debug\net8.0\Rewe_JobSearcher.pdb
 C:\Repos\Rewe_test\JobSearcher_QueriesTest\obj\Debug\net8.0\JobSearcher_QueriesTest.csproj.AssemblyReference.cache
 C:\Repos\Rewe_test\JobSearcher_QueriesTest\obj\Debug\net8.0\JobSearcher_QueriesTest.GeneratedMSBuildEditorConfig.editorconfig
 C:\Repos\Rewe_test\JobSearcher_QueriesTest\obj\Debug\net8.0\JobSearcher_QueriesTest.AssemblyInfoInputs.cache
@@ -155,10 +162,3 @@ C:\Repos\Rewe_test\JobSearcher_QueriesTest\obj\Debug\net8.0\refint\JobSearcher_Q
 C:\Repos\Rewe_test\JobSearcher_QueriesTest\obj\Debug\net8.0\JobSearcher_QueriesTest.pdb
 C:\Repos\Rewe_test\JobSearcher_QueriesTest\obj\Debug\net8.0\JobSearcher_QueriesTest.genruntimeconfig.cache
 C:\Repos\Rewe_test\JobSearcher_QueriesTest\obj\Debug\net8.0\ref\JobSearcher_QueriesTest.dll
-C:\Repos\Rewe_test\JobSearcher_QueriesTest\bin\Debug\net8.0\Castle.Core.dll
-C:\Repos\Rewe_test\JobSearcher_QueriesTest\bin\Debug\net8.0\Moq.dll
-C:\Repos\Rewe_test\JobSearcher_QueriesTest\bin\Debug\net8.0\Rewe_JobSearcher.deps.json
-C:\Repos\Rewe_test\JobSearcher_QueriesTest\bin\Debug\net8.0\Rewe_JobSearcher.runtimeconfig.json
-C:\Repos\Rewe_test\JobSearcher_QueriesTest\bin\Debug\net8.0\Rewe_JobSearcher.exe
-C:\Repos\Rewe_test\JobSearcher_QueriesTest\bin\Debug\net8.0\Rewe_JobSearcher.dll
-C:\Repos\Rewe_test\JobSearcher_QueriesTest\bin\Debug\net8.0\Rewe_JobSearcher.pdb

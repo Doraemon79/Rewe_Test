@@ -147,7 +147,6 @@ namespace JobSearcher_Queries
         public async Task<string> GetToken(string url, string clientId, string clientSecret)
         {
             string accessToken = null;
-
             // Combine the credentials into a single string
             string credentials = $"{clientId}:{clientSecret}";
 
@@ -166,9 +165,11 @@ namespace JobSearcher_Queries
                 // Make the POST request
                 HttpResponseMessage response = await client.PostAsync(url, requestData);
 
+
                 // Read the response
                 string responseContent = await response.Content.ReadAsStringAsync();
                 Console.WriteLine(responseContent);
+
                 //Console.ReadLine();
                 accessToken = ExtractAccessToken(responseContent);
             }
