@@ -9,31 +9,61 @@ namespace Rewe_JobSearcher.BusinessLogic
     {
         public ApplicantDocument DocumentFiller()
         {
+            bool valid = false;
             ApplicantDocument document = new ApplicantDocument();
-            Console.WriteLine();
-            Console.WriteLine("Please insert the type of the document (Cv, MotivationalLetter, Foto, Misc, GradeSheet)");
-            document.documentType = Console.ReadLine();
-            Console.WriteLine();
-            Console.WriteLine("Please insert the path of the document");
-            var documentPath = Console.ReadLine();
-            if (File.Exists(documentPath))
+            do
             {
-                if ((document.documentType == "Foto" && (!documentPath.EndsWith(".jpg") && !documentPath.EndsWith(".bmp") && !documentPath.EndsWith(".png") && !documentPath.EndsWith(".pdf"))) ||
-                    (document.documentType == "Cv" && (!documentPath.EndsWith(".pdf") && !documentPath.EndsWith(".doc") && !documentPath.EndsWith(".docx"))) ||
-                    (document.documentType == "MotivationalLetter" && (!documentPath.EndsWith(".pdf") && !documentPath.EndsWith(".doc") && !documentPath.EndsWith(".docx"))))
+                Console.WriteLine();
+                Console.WriteLine("Please insert the type of the document (Cv, MotivationalLetter, Foto, Misc, GradeSheet)");
+                var type = Console.ReadLine().ToLower();
+                if (type != null && (type.Equals("cv") || type.Equals("motivationalLetter") || type.Equals("foto") || type.Equals("misc") || type.Equals("gradesheet")))
                 {
-                    Console.WriteLine("Invalid document name");
+                    document.documentType = type;
+                    valid = true;
                 }
                 else
                 {
-                    document.documentName = Path.GetFileName(documentPath);
+                    Console.WriteLine("Type is invalid please retry");
+                    valid = false;
                 }
-                document.documentBlob = ConvertToBase64(documentPath);
-            }
-            else
+            } while (!valid);
+            do
             {
-                Console.WriteLine("Invalid path");
-            }
+                valid = false;
+                Console.WriteLine();
+                Console.WriteLine("Please insert the path of the document");
+                var documentPath = Console.ReadLine();
+                if (File.Exists(documentPath))
+                {
+                    if ((document.documentType == "foto" && (!documentPath.EndsWith(".jpg") && !documentPath.EndsWith(".png") && !documentPath.EndsWith(".pdf"))) ||
+                        (document.documentType == "cv" && (!documentPath.EndsWith(".pdf") && !documentPath.EndsWith(".doc") && !documentPath.EndsWith(".docx"))) ||
+                        (document.documentType == "MotivationalLetter" && (!documentPath.EndsWith(".pdf") && !documentPath.EndsWith(".doc") && !documentPath.EndsWith(".docx"))))
+                    {
+                        Console.WriteLine("Invalid document format");
+                        valid = false;
+                    }
+                    // Create a FileInfo object
+                    FileInfo fileInfo = new FileInfo(documentPath);
+
+                    // Get the file size in bytes
+                    long fileSizeInBytes = fileInfo.Length / 1000;
+                    if (fileSizeInBytes > 3300)
+                    {
+                        Console.WriteLine("The file is too big, please upload a file smaller than 3MB");
+                    }
+                    else
+                    {
+                        document.documentName = Path.GetFileName(documentPath);
+                        valid = true;
+                    }
+
+                    document.documentBlob = ConvertToBase64(documentPath);
+                }
+                else
+                {
+                    Console.WriteLine("Invalid path");
+                }
+            } while (!valid);
             return document;
         }
 

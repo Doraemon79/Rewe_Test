@@ -1,0 +1,10 @@
+2024-05-26 22:50:54.384 +02:00 [INF] Starting up the service...
+2024-05-26 22:53:48.888 +02:00 [FTL] Application start-up failed.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Rewe_JobSearcher.BusinessLogic.CredentialsLogic.ShowDocumentsResponse(DocumentResponse documentsResponse) in C:\Repos\Rewe_test\Rewe_Credentials\BusinessLogic\CredentialsLogic.cs:line 118
+   at Rewe_JobSearcher.Program.Main(String[] args) in C:\Repos\Rewe_test\Rewe_Credentials\Program.cs:line 95
+2024-05-26 22:54:40.828 +02:00 [INF] Starting up the service...
+2024-05-26 22:55:45.711 +02:00 [FTL] Application start-up failed.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Rewe_JobSearcher.BusinessLogic.CredentialsLogic.ShowDocumentsResponse(DocumentResponse documentsResponse) in C:\Repos\Rewe_test\Rewe_Credentials\BusinessLogic\CredentialsLogic.cs:line 118
+   at Rewe_JobSearcher.Program.Main(String[] args) in C:\Repos\Rewe_test\Rewe_Credentials\Program.cs:line 95

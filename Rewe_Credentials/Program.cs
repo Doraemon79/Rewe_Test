@@ -40,12 +40,10 @@ namespace Rewe_JobSearcher
                 var CredentialsLogicService = host.Services.GetRequiredService<ICredentialsLogic>();
 
                 // Your client credentials
-                //Console.WriteLine("Please write your client-Id");
-                //var clientId = Console.ReadLine();
-                string clientId = "2f7680b4-35c2-45d9-8560-3e7af1be61fa";
-                //Console.WriteLine("Please write your client-Secret");
-                //string clientSecret = Console.ReadLine();
-                string clientSecret = "1855ed7e-88d5-4d13-8ab2-b40da734befa";
+                Console.WriteLine("Please write your client-Id");
+                var clientId = Console.ReadLine();
+                Console.WriteLine("Please write your client-Secret");
+                string clientSecret = Console.ReadLine();
                 string token = await apiService.GetToken("https://dev.auth.rewe-group.at/v1/api/auth/token", clientId, clientSecret);
                 Credential credential = new Credential();
                 await apiService.PostCredentials(token, credential);

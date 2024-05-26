@@ -154,7 +154,7 @@
               "RelativeDocumentMoniker": "Rewe_Credentials\\Program.cs",
               "ToolTip": "C:\\Repos\\Rewe_test\\Rewe_Credentials\\Program.cs",
               "RelativeToolTip": "Rewe_Credentials\\Program.cs",
-              "ViewState": "AQIAACcAAAAAAAAAAAAAACwAAABJAAAA",
+              "ViewState": "AQIAABoAAAAAAAAAAAAUwCEAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-21T14:02:56.067Z",
               "IsPinned": true,
@@ -168,7 +168,7 @@
               "RelativeDocumentMoniker": "Rewe_Credentials\\BusinessLogic\\CredentialsLogic.cs",
               "ToolTip": "C:\\Repos\\Rewe_test\\Rewe_Credentials\\BusinessLogic\\CredentialsLogic.cs",
               "RelativeToolTip": "Rewe_Credentials\\BusinessLogic\\CredentialsLogic.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEIAAAAMAAAA",
+              "ViewState": "AQIAAEYAAAAAAAAAAAAQwDEAAAAsAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-21T14:20:06.051Z",
               "IsPinned": true,
@@ -210,7 +210,7 @@
               "RelativeDocumentMoniker": "JobSearcher_Queries\\ApiService.cs",
               "ToolTip": "C:\\Repos\\Rewe_test\\JobSearcher_Queries\\ApiService.cs",
               "RelativeToolTip": "JobSearcher_Queries\\ApiService.cs",
-              "ViewState": "AQIAABsAAAAAAAAAAAAUwCYAAAAAAAAA",
+              "ViewState": "AQIAABsAAAAAAAAAAAAUwC8AAAAUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-21T18:21:41.808Z",
               "IsPinned": true,
@@ -226,8 +226,7 @@
               "RelativeToolTip": "JobSearcher_Queries\\Models\\SubmitResponse.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAwAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-26T16:16:40.172Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-26T16:16:40.172Z"
             },
             {
               "$type": "Document",
@@ -239,8 +238,7 @@
               "RelativeToolTip": "JobSearcher_Queries\\Models\\Stores.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-26T16:16:14.768Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-26T16:16:14.768Z"
             },
             {
               "$type": "Document",
@@ -252,8 +250,7 @@
               "RelativeToolTip": "Rewe_Credentials\\Interfaces\\ICredentialsLogic.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-21T14:37:49.298Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-21T14:37:49.298Z"
             },
             {
               "$type": "Document",
@@ -265,8 +262,7 @@
               "RelativeToolTip": "JobSearcher_Queries\\Models\\SubmitRequest.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAeAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-24T17:22:04.483Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-24T17:22:04.483Z"
             },
             {
               "$type": "Document",
@@ -278,8 +274,7 @@
               "RelativeToolTip": "JobSearcher_Queries\\Models\\Links.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-26T16:15:04.574Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-26T16:15:04.574Z"
             },
             {
               "$type": "Document",
@@ -291,8 +286,7 @@
               "RelativeToolTip": "JobSearcher_Queries\\Models\\Filter.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAqwAIAAAAXAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-22T14:23:48.743Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-22T14:23:48.743Z"
             },
             {
               "$type": "Document",
@@ -304,8 +298,7 @@
               "RelativeToolTip": "JobSearcher_Queries\\Models\\JobWithDetailedDescriptionResponse.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAA/AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-25T12:40:56.096Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-25T12:40:56.096Z"
             },
             {
               "$type": "Document",
@@ -317,8 +310,7 @@
               "RelativeToolTip": "JobSearcher_Queries\\Models\\JobGroups.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAaAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-20T16:38:24.249Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-20T16:38:24.249Z"
             },
             {
               "$type": "Document",
@@ -330,8 +322,7 @@
               "RelativeToolTip": "JobSearcher_Queries\\Models\\JobDescriptionResponse.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAnAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-20T15:41:46.905Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-20T15:41:46.905Z"
             },
             {
               "$type": "Document",
@@ -343,8 +334,7 @@
               "RelativeToolTip": "JobSearcher_Queries\\Models\\JobApplicationResult.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-26T16:14:23.936Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-26T16:14:23.936Z"
             },
             {
               "$type": "Document",
@@ -356,8 +346,7 @@
               "RelativeToolTip": "JobSearcher_Queries\\Models\\Gender.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-20T15:01:51.678Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-20T15:01:51.678Z"
             },
             {
               "$type": "Document",
@@ -369,8 +358,7 @@
               "RelativeToolTip": "JobSearcher_Queries\\Models\\Job.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAmAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-20T16:36:46.09Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-20T16:36:46.09Z"
             },
             {
               "$type": "Document",
@@ -382,8 +370,7 @@
               "RelativeToolTip": "JobSearcher_Queries\\Models\\EmptyGenericRequest.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAkAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-25T09:24:45.92Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-25T09:24:45.92Z"
             },
             {
               "$type": "Document",
@@ -395,8 +382,7 @@
               "RelativeToolTip": "JobSearcher_Queries\\Models\\documents.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAwAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-26T16:13:42.592Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-26T16:13:42.592Z"
             },
             {
               "$type": "Document",
@@ -408,8 +394,7 @@
               "RelativeToolTip": "JobSearcher_Queries\\Models\\DocumentResponse.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAXAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-20T15:07:07.927Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-20T15:07:07.927Z"
             },
             {
               "$type": "Document",
@@ -421,8 +406,7 @@
               "RelativeToolTip": "JobSearcher_Queries\\Models\\Credential.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-21T20:33:34.147Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-21T20:33:34.147Z"
             },
             {
               "$type": "Document",
@@ -434,8 +418,7 @@
               "RelativeToolTip": "JobSearcher_Queries\\Models\\Applicant.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-24T20:46:28.628Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-24T20:46:28.628Z"
             },
             {
               "$type": "Document",
@@ -447,8 +430,7 @@
               "RelativeToolTip": "JobSearcher_Queries\\Models\\ApplicantDocument.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-26T16:12:52.834Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-26T16:12:52.834Z"
             },
             {
               "$type": "Document",
@@ -460,8 +442,7 @@
               "RelativeToolTip": "JobSearcher_QueriesTest\\bin\\Debug\\net8.0\\fine-code-coverage\\coverage-tool-output\\Cobertura.xml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
-              "WhenOpened": "2024-05-26T16:09:11.624Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-26T16:09:11.624Z"
             },
             {
               "$type": "Document",
@@ -473,8 +454,7 @@
               "RelativeToolTip": "JobSearcher_Queries\\Interfaces\\IApiService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAqwAcAAABQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-25T09:07:14.061Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-25T09:07:14.061Z"
             },
             {
               "$type": "Document",
@@ -486,8 +466,7 @@
               "RelativeToolTip": "JobSearcher_Queries\\Models\\SearchResponse.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-20T16:35:49.568Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-20T16:35:49.568Z"
             },
             {
               "$type": "Document",
@@ -499,8 +478,7 @@
               "RelativeToolTip": "JobSearcher_Queries\\Models\\SearchFilter.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAYwAUAAABGAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-20T15:59:22.138Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-20T15:59:22.138Z"
             }
           ]
         }
