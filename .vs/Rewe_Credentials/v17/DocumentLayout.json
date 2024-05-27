@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Repos\\Rewe_test\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{25D08E45-A8B7-437A-97F9-D9F116342FD5}|Rewe_Credentials\\Rewe_JobSearcher.csproj|c:\\repos\\rewe_test\\rewe_credentials\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{25D08E45-A8B7-437A-97F9-D9F116342FD5}|Rewe_Credentials\\Rewe_JobSearcher.csproj|solutionrelative:rewe_credentials\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{25D08E45-A8B7-437A-97F9-D9F116342FD5}|Rewe_Credentials\\Rewe_JobSearcher.csproj|c:\\repos\\rewe_test\\rewe_credentials\\businesslogic\\credentialslogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{25D08E45-A8B7-437A-97F9-D9F116342FD5}|Rewe_Credentials\\Rewe_JobSearcher.csproj|solutionrelative:rewe_credentials\\businesslogic\\credentialslogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{25D08E45-A8B7-437A-97F9-D9F116342FD5}|Rewe_Credentials\\Rewe_JobSearcher.csproj|c:\\repos\\rewe_test\\rewe_credentials\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{25D08E45-A8B7-437A-97F9-D9F116342FD5}|Rewe_Credentials\\Rewe_JobSearcher.csproj|solutionrelative:rewe_credentials\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FA925405-6461-4CBD-9EAA-2BD1ACA2BBDD}|JobSearcher_Queries\\JobSearcher_Queries.csproj|c:\\repos\\rewe_test\\jobsearcher_queries\\apiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -144,17 +144,17 @@
         },
         {
           "DockedWidth": 319,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Repos\\Rewe_test\\Rewe_Credentials\\Program.cs",
               "RelativeDocumentMoniker": "Rewe_Credentials\\Program.cs",
               "ToolTip": "C:\\Repos\\Rewe_test\\Rewe_Credentials\\Program.cs",
               "RelativeToolTip": "Rewe_Credentials\\Program.cs",
-              "ViewState": "AQIAABoAAAAAAAAAAAAUwCEAAAANAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-21T14:02:56.067Z",
               "IsPinned": true,
@@ -162,13 +162,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "CredentialsLogic.cs",
               "DocumentMoniker": "C:\\Repos\\Rewe_test\\Rewe_Credentials\\BusinessLogic\\CredentialsLogic.cs",
               "RelativeDocumentMoniker": "Rewe_Credentials\\BusinessLogic\\CredentialsLogic.cs",
               "ToolTip": "C:\\Repos\\Rewe_test\\Rewe_Credentials\\BusinessLogic\\CredentialsLogic.cs",
               "RelativeToolTip": "Rewe_Credentials\\BusinessLogic\\CredentialsLogic.cs",
-              "ViewState": "AQIAAEYAAAAAAAAAAAAQwDEAAAAsAAAA",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAIwBIAAABUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-21T14:20:06.051Z",
               "IsPinned": true,
@@ -185,8 +185,7 @@
               "ViewState": "AQIAAAUAAAAAAAAAAAAxwAgAAAAOAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-26T09:24:52.163Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -199,8 +198,7 @@
               "ViewState": "AQIAALwAAAAAAAAAAAAqwMIAAAAbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-25T16:50:34.197Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -213,8 +211,7 @@
               "ViewState": "AQIAABsAAAAAAAAAAAAUwC8AAAAUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-21T18:21:41.808Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",

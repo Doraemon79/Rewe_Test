@@ -16,7 +16,7 @@ namespace Rewe_JobSearcher.BusinessLogic
                 Console.WriteLine();
                 Console.WriteLine("Please insert the type of the document (Cv, MotivationalLetter, Foto, Misc, GradeSheet)");
                 var type = Console.ReadLine().ToLower();
-                if (type != null && (type.Equals("cv") || type.Equals("motivationalLetter") || type.Equals("foto") || type.Equals("misc") || type.Equals("gradesheet")))
+                if (type != null && (type.Equals("cv") || type.Equals("motivationalletter") || type.Equals("foto") || type.Equals("misc") || type.Equals("gradesheet")))
                 {
                     document.documentType = type;
                     valid = true;
@@ -37,7 +37,7 @@ namespace Rewe_JobSearcher.BusinessLogic
                 {
                     if ((document.documentType == "foto" && (!documentPath.EndsWith(".jpg") && !documentPath.EndsWith(".png") && !documentPath.EndsWith(".pdf"))) ||
                         (document.documentType == "cv" && (!documentPath.EndsWith(".pdf") && !documentPath.EndsWith(".doc") && !documentPath.EndsWith(".docx"))) ||
-                        (document.documentType == "MotivationalLetter" && (!documentPath.EndsWith(".pdf") && !documentPath.EndsWith(".doc") && !documentPath.EndsWith(".docx"))))
+                        (document.documentType == "Motivationalletter" && (!documentPath.EndsWith(".pdf") && !documentPath.EndsWith(".doc") && !documentPath.EndsWith(".docx"))))
                     {
                         Console.WriteLine("Invalid document format");
                         valid = false;
